@@ -23,7 +23,7 @@ export const boardData = {
       "university": null,
       "course": null,
       "email": null,
-      "photo": "/assets/images/exco/Fathih.png"
+      "photo": `${import.meta.env.BASE_URL}assets/images/exco/Fathih.png`
     }
   ],
   "2023": [
@@ -37,7 +37,7 @@ export const boardData = {
       "university": "South Eastern University of Sri Lanka",
       "course": "Engineering",
       "email": "aboofainaz@gmail.com",
-      "photo": "/assets/images/exco/Fainaz.png"
+      "photo": `${import.meta.env.BASE_URL}assets/images/exco/Fainaz.png`
     },
     {
       "no": "2",
@@ -49,7 +49,7 @@ export const boardData = {
       "university": "University of Sri Jayewardenepura",
       "course": "ICT",
       "email": "ihjasdev@gmail.com",
-      "photo": "/assets/images/exco/Ihjas.png"
+      "photo": `${import.meta.env.BASE_URL}assets/images/exco/Ihjas.png`
     },
     {
       "no": "3",
@@ -61,19 +61,19 @@ export const boardData = {
       "university": "University of Colombo",
       "course": "Nursing",
       "email": "fasleem2@gmail.com",
-      "photo": "/assets/images/exco/Fasleem.png"
+      "photo": `${import.meta.env.BASE_URL}assets/images/exco/Fasleem.png`
     },
     {
       "no": "4",
       "position": "Treasurer",
-      "name": "W.M. Shakeel",
+      "name": "W.M. Shakkeel",
       "nic": "983233350v",
       "phonenumberwhatsapp": "757405050",
       "address": "Peruntheru, Kinniya - 05",
       "university": "University of Moratuwa",
       "course": "NDT",
       "email": "⁠shakkeel000@gmail.com",
-      "photo": null
+      "photo": `${import.meta.env.BASE_URL}assets/images/exco/Shakkeel.png`
     },
     {
       "no": "5",
@@ -85,7 +85,7 @@ export const boardData = {
       "university": null,
       "course": null,
       "email": null,
-      "photo": "/assets/images/exco/Rais.png"
+      "photo": `${import.meta.env.BASE_URL}assets/images/exco/Rais.png`
     },
     {
       "no": "6",
@@ -97,7 +97,7 @@ export const boardData = {
       "university": "Rajarata University of Sri Lanka",
       "course": "ICT",
       "email": "hazeebsameem321@gmail.com",
-      "photo": "/assets/images/exco/Hazeeb.png"
+      "photo": `${import.meta.env.BASE_URL}assets/images/exco/Hazeeb.png`
     }
   ],
   "2024": [
@@ -111,7 +111,7 @@ export const boardData = {
       "university": "University of Moratuwa",
       "course": "Engineering",
       "email": "sareefsarraj1999@gmail.com",
-      "photo": "/assets/images/exco/Sarraj.png"
+      "photo": `${import.meta.env.BASE_URL}assets/images/exco/Sarraj.png`
     },
     {
       "no": "2",
@@ -123,7 +123,7 @@ export const boardData = {
       "university": "University of Vavuniya",
       "course": "Project Management",
       "email": "mohamedmanasir002@gmail.com",
-      "photo": "/assets/images/exco/Manasir.png"
+      "photo": `${import.meta.env.BASE_URL}assets/images/exco/Manasir.png`
     },
     {
       "no": "3",
@@ -135,7 +135,7 @@ export const boardData = {
       "university": "South Eastern University of Sri Lanka",
       "course": "Arts",
       "email": "mohamedfarhan8518@gmail.com",
-      "photo": "/assets/images/exco/Farhan.png"
+      "photo": `${import.meta.env.BASE_URL}assets/images/exco/Farhan.png`
     },
     {
       "no": "4",
@@ -147,7 +147,7 @@ export const boardData = {
       "university": "University of Sri Jayewardenepura",
       "course": "Engineering",
       "email": "muzoufilmuhthaseem@gmail.com",
-      "photo": "/assets/images/exco/Muhthaseem.png"
+      "photo": `${import.meta.env.BASE_URL}assets/images/exco/Muhthaseem.png`
     },
     {
       "no": "5",
@@ -159,7 +159,7 @@ export const boardData = {
       "university": "University of Moratuwa",
       "course": "NDT in Electrical Engineering",
       "email": "aasifaha119@gmail.com",
-      "photo": "/assets/images/exco/Aashif.png"
+      "photo": `${import.meta.env.BASE_URL}assets/images/exco/Aashif.png`
     }
   ],
   "2025": [
@@ -173,7 +173,7 @@ export const boardData = {
       "university": "University of Sri Jayewardenepura",
       "course": "Engineering",
       "email": "muzoufilmuhthaseem@gmail.com",
-      "photo": "/assets/images/exco/Muhthaseem.png"
+      "photo": `${import.meta.env.BASE_URL}assets/images/exco/Muhthaseem.png`
     },
     {
       "no": "2",
@@ -185,7 +185,7 @@ export const boardData = {
       "university": "University of Moratuwa",
       "course": "NDT in Electrical Engineering",
       "email": "aasifaha119@gmail.com",
-      "photo": "/assets/images/exco/Aashif.png"
+      "photo": `${import.meta.env.BASE_URL}assets/images/exco/Aashif.png`
     },
     {
       "no": "3",
@@ -197,7 +197,7 @@ export const boardData = {
       "university": "University of Ruhuna",
       "course": "Nursing",
       "email": "nmfasith01@gmail.com",
-      "photo": "/assets/images/exco/Fasith.png"
+      "photo": `${import.meta.env.BASE_URL}assets/images/exco/Fasith.png`
     },
     {
       "no": "4",
@@ -209,7 +209,7 @@ export const boardData = {
       "university": "University of Colombo",
       "course": "Nursing",
       "email": "shakilsul123@gmail.com",
-      "photo": "/assets/images/exco/Shakil.png"
+      "photo": `${import.meta.env.BASE_URL}assets/images/exco/Shakil.png`
     },
     {
       "no": "5",
@@ -221,7 +221,7 @@ export const boardData = {
       "university": "Rajarata University of Sri Lanka",
       "course": "Management",
       "email": "mohamedihsan107@gmail.com",
-      "photo": "/assets/images/exco/Ihsan.png"
+      "photo": `${import.meta.env.BASE_URL}assets/images/exco/Ihsan.png`
     },
     {
       "no": "6",
@@ -233,7 +233,7 @@ export const boardData = {
       "university": "University of Jaffna",
       "course": "Nursing",
       "email": "moraiyan2002@gmail.com",
-      "photo": "/assets/images/exco/Raiyan.png"
+      "photo": `${import.meta.env.BASE_URL}assets/images/exco/Raiyan.png`
     },
     {
       "no": "7",
@@ -245,7 +245,7 @@ export const boardData = {
       "university": "South Eastern University of Sri Lanka",
       "course": "Biological Science",
       "email": "amnafees2001@gmail.com",
-      "photo": "/assets/images/exco/Nafees.png"
+      "photo": `${import.meta.env.BASE_URL}assets/images/exco/Nafees.png`
     },
     {
       "no": "8",
@@ -257,7 +257,7 @@ export const boardData = {
       "university": "Institute of Technology University of Moratuwa",
       "course": "NDT in Electrical Engineering",
       "email": "mrmshajith@gmail.com",
-      "photo": "/assets/images/exco/Shajith.png"
+      "photo": `${import.meta.env.BASE_URL}assets/images/exco/Shajith.png`
     },
     {
       "no": "9",
@@ -269,7 +269,7 @@ export const boardData = {
       "university": "Eastern University, Sri Lanka",
       "course": "Sociology and anthropology",
       "email": "rasmideen01@gmail.com",
-      "photo": "/assets/images/exco/Rasmideen.png"
+      "photo": `${import.meta.env.BASE_URL}assets/images/exco/Rasmideen.png`
     },
     {
       "no": "10",
@@ -281,7 +281,7 @@ export const boardData = {
       "university": "University of Ruhuna",
       "course": "Financial Mathematics and Industrial Statistics",
       "email": "shakeebahamed456@gmail.com",
-      "photo": "/assets/images/exco/Shakeeb.png"
+      "photo": `${import.meta.env.BASE_URL}assets/images/exco/Shakeeb.png`
     }
   ],
   "2026": [
@@ -295,7 +295,7 @@ export const boardData = {
       "university": "University of Jaffna",
       "course": "Nursing",
       "email": "riskhanmd6572@gmail.com",
-      "photo": "/assets/images/exco/Riskhan.png"
+      "photo": `${import.meta.env.BASE_URL}assets/images/exco/Riskhan.png`
     },
     {
       "no": "2",
@@ -307,7 +307,7 @@ export const boardData = {
       "university": "Wayamba University of Sri Lanka",
       "course": "Food Production and Technology Management",
       "email": "mrmohammedrifthy1@gmail.com",
-      "photo": "/assets/images/exco/Rifthi.png"
+      "photo": `${import.meta.env.BASE_URL}assets/images/exco/Rifthi.png`
     },
     {
       "no": "3",
@@ -319,7 +319,7 @@ export const boardData = {
       "university": "Wayamba University of Sri Lanka",
       "course": "Medicine",
       "email": "mohamedifkhan24@gmail.com",
-      "photo": "/assets/images/exco/Ifkhan.png"
+      "photo": `${import.meta.env.BASE_URL}assets/images/exco/Ifkhan.png`
     },
     {
       "no": "4",
@@ -331,7 +331,7 @@ export const boardData = {
       "university": "University of Peradeniya",
       "course": "Social work",
       "email": "ijas7066@gmail.com",
-      "photo": "/assets/images/exco/Ijas.png"
+      "photo": `${import.meta.env.BASE_URL}assets/images/exco/Ijas.png`
     },
     {
       "no": "5",
@@ -343,7 +343,7 @@ export const boardData = {
       "university": "Trincomalee Campus, EUSL",
       "course": "Physical science",
       "email": "sahmeersahmeer125@gmail.com",
-      "photo": "/assets/images/exco/Sahmeer.png"
+      "photo": `${import.meta.env.BASE_URL}assets/images/exco/Sahmeer.png`
     },
     {
       "no": "6",
@@ -355,7 +355,7 @@ export const boardData = {
       "university": "Trincomalee Campus, EUSL",
       "course": "Physical science",
       "email": "umohamedatheeb@gmail.com",
-      "photo": "/assets/images/exco/Atheeb.png"
+      "photo": `${import.meta.env.BASE_URL}assets/images/exco/Atheeb.png`
     },
     {
       "no": "7",
@@ -367,7 +367,7 @@ export const boardData = {
       "university": "South Eastern University of Sri Lanka",
       "course": "Physical Science",
       "email": "ahamedaaa2373@gmail.com",
-      "photo": "/assets/images/exco/Athnan.png"
+      "photo": `${import.meta.env.BASE_URL}assets/images/exco/Athnan.png`
     },
     {
       "no": "8",
@@ -379,7 +379,7 @@ export const boardData = {
       "university": "Sabaragamuwa University of Sri Lanka",
       "course": "Data science",
       "email": "sharfiazeez2004116@gmail.com",
-      "photo": "/assets/images/exco/Sharfi.png"
+      "photo": `${import.meta.env.BASE_URL}assets/images/exco/Sharfi.png`
     },
     {
       "no": "9",
@@ -391,7 +391,7 @@ export const boardData = {
       "university": "University of Vavuniya",
       "course": "ICT",
       "email": "nihasmohammedriwaqi@gmail.com",
-      "photo": "/assets/images/exco/Riwaqi.png"
+      "photo": `${import.meta.env.BASE_URL}assets/images/exco/Riwaqi.png`
     },
     {
       "no": "10",
@@ -403,7 +403,7 @@ export const boardData = {
       "university": "University of Ruhuna",
       "course": "Engineering",
       "email": "mmsajath10867@gmail.com",
-      "photo": "/assets/images/exco/Sajath.png"
+      "photo": `${import.meta.env.BASE_URL}assets/images/exco/Sajath.png`
     },
     {
       "no": "11",
@@ -415,7 +415,7 @@ export const boardData = {
       "university": "University of Peradeniya",
       "course": "Arts",
       "email": "mohamedabrar7515@gmail.com",
-      "photo": "/assets/images/exco/Abrar.png"
+      "photo": `${import.meta.env.BASE_URL}assets/images/exco/Abrar.png`
     }
   ],
   "2019-21": [
@@ -441,7 +441,7 @@ export const boardData = {
       "university": "University of Peradeniya",
       "course": "Medicine",
       "email": "ihthi96sham@gmail.com",
-      "photo": "/assets/images/exco/Ihthisham.png"
+      "photo": `${import.meta.env.BASE_URL}assets/images/exco/Ihthisham.png`
     }
   ]
 };

@@ -170,7 +170,7 @@ export function renderNavbar(activePage) {
   <nav class="navbar" id="navbar">
     <div class="container">
       <a href="index.html" class="navbar__logo">
-        <img src="/assets/images/logo-white.png" alt="FOCUS KUSA Logo">
+        <img src="${import.meta.env.BASE_URL}assets/images/logo-white.png" alt="FOCUS KUSA Logo">
       </a>
       <div class="navbar__links">
         ${linksHTML}
@@ -199,7 +199,7 @@ export function renderFooter() {
     <div class="container">
       <div class="footer__grid">
         <div class="footer__brand">
-          <img src="/assets/images/logo-white.png" alt="FOCUS KUSA" class="footer__logo">
+          <img src="${import.meta.env.BASE_URL}assets/images/logo-white.png" alt="FOCUS KUSA" class="footer__logo">
           <p class="footer__desc">
             FOCUS KUSA is a nonprofit, student-led association formed by university students from Kinniya to empower the educational and personal growth of their community through mentorship, academic support, leadership, and service.
           </p>
