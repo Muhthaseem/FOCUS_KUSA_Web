@@ -1,0 +1,447 @@
+// Auto-generated from CSV sources
+export const boardData = {
+  "2022": [
+    {
+      "no": "1",
+      "position": "President",
+      "name": "M. Roshen Akthar",
+      "nic": "199711901830",
+      "phonenumberwhatsapp": "775364107",
+      "address": "No 57/2, Al Aqza Road, Kinniya 02",
+      "university": "University of Colombo",
+      "course": "Medicine",
+      "email": null,
+      "photo": null
+    },
+    {
+      "no": "5",
+      "position": "Event Coordinator",
+      "name": "R.M. Al Fathih",
+      "nic": "973234099v",
+      "phonenumberwhatsapp": "755438148",
+      "address": "KCC West Land, Kuttikarachi, Kinniya 05",
+      "university": null,
+      "course": null,
+      "email": null,
+      "photo": "/assets/images/exco/Fathih.png"
+    }
+  ],
+  "2023": [
+    {
+      "no": "1",
+      "position": "President",
+      "name": "A.U. Fainaz Ahamed",
+      "nic": "199624501772",
+      "phonenumberwhatsapp": "776565291",
+      "address": "Nijamiya Street, Kinniya 05",
+      "university": "South Eastern University of Sri Lanka",
+      "course": "Engineering",
+      "email": "aboofainaz@gmail.com",
+      "photo": "/assets/images/exco/Fainaz.png"
+    },
+    {
+      "no": "2",
+      "position": "Vice President",
+      "name": "A.M. Ihjas",
+      "nic": "980871363v",
+      "phonenumberwhatsapp": "758913173",
+      "address": "No 80, Kattaiyaru Street,Kinniya 02",
+      "university": "University of Sri Jayewardenepura",
+      "course": "ICT",
+      "email": "ihjasdev@gmail.com",
+      "photo": "/assets/images/exco/Ihjas.png"
+    },
+    {
+      "no": "3",
+      "position": "Secretary",
+      "name": "M.M. Fasleem",
+      "nic": "971281960v",
+      "phonenumberwhatsapp": "754380877, 770199858",
+      "address": "No.25, Elil arangu Street, Kinniya 01",
+      "university": "University of Colombo",
+      "course": "Nursing",
+      "email": "fasleem2@gmail.com",
+      "photo": "/assets/images/exco/Fasleem.png"
+    },
+    {
+      "no": "4",
+      "position": "Treasurer",
+      "name": "W.M. Shakeel",
+      "nic": "983233350v",
+      "phonenumberwhatsapp": "757405050",
+      "address": "Peruntheru, Kinniya - 05",
+      "university": "University of Moratuwa",
+      "course": "NDT",
+      "email": "⁠shakkeel000@gmail.com",
+      "photo": null
+    },
+    {
+      "no": "5",
+      "position": "Event Coordinator",
+      "name": "M.I.M. Rais",
+      "nic": null,
+      "phonenumberwhatsapp": null,
+      "address": null,
+      "university": null,
+      "course": null,
+      "email": null,
+      "photo": "/assets/images/exco/Rais.png"
+    },
+    {
+      "no": "6",
+      "position": "Media Coordinator",
+      "name": "M.S. Hazeeb",
+      "nic": "981433181v",
+      "phonenumberwhatsapp": "753333110",
+      "address": "No.142, Main Street, Kinniya-05.",
+      "university": "Rajarata University of Sri Lanka",
+      "course": "ICT",
+      "email": "hazeebsameem321@gmail.com",
+      "photo": "/assets/images/exco/Hazeeb.png"
+    }
+  ],
+  "2024": [
+    {
+      "no": "1",
+      "position": "President",
+      "name": "S.M. Sarraj",
+      "nic": "992175990v",
+      "phonenumberwhatsapp": "766428404",
+      "address": "No 30, Aq Aqsha 1st Lane, Kinniya 02",
+      "university": "University of Moratuwa",
+      "course": "Engineering",
+      "email": "sareefsarraj1999@gmail.com",
+      "photo": "/assets/images/exco/Sarraj.png"
+    },
+    {
+      "no": "2",
+      "position": "Secretary",
+      "name": "I.M. Manasir",
+      "nic": "980752933v",
+      "phonenumberwhatsapp": "755770358",
+      "address": "Kurinchakerny-02, Kinniya",
+      "university": "University of Vavuniya",
+      "course": "Project Management",
+      "email": "mohamedmanasir002@gmail.com",
+      "photo": "/assets/images/exco/Manasir.png"
+    },
+    {
+      "no": "3",
+      "position": "Treasurer",
+      "name": "M.A.M. Farhan",
+      "nic": "991360824v",
+      "phonenumberwhatsapp": "753439547",
+      "address": "Ahamed Lane, Kinniya 02",
+      "university": "South Eastern University of Sri Lanka",
+      "course": "Arts",
+      "email": "mohamedfarhan8518@gmail.com",
+      "photo": "/assets/images/exco/Farhan.png"
+    },
+    {
+      "no": "4",
+      "position": "Chief Editor",
+      "name": "M.M. Muhthaseem",
+      "nic": "200121800085",
+      "phonenumberwhatsapp": "750270257",
+      "address": "No.40/11, Ahamed Lane, Kinniya-03.",
+      "university": "University of Sri Jayewardenepura",
+      "course": "Engineering",
+      "email": "muzoufilmuhthaseem@gmail.com",
+      "photo": "/assets/images/exco/Muhthaseem.png"
+    },
+    {
+      "no": "5",
+      "position": "Event Coordinator",
+      "name": "M.I. Aashif Ahmath",
+      "nic": "200018103744",
+      "phonenumberwhatsapp": "750113719",
+      "address": "210A, Kurincharkkerny-2, Kinniya.",
+      "university": "University of Moratuwa",
+      "course": "NDT in Electrical Engineering",
+      "email": "aasifaha119@gmail.com",
+      "photo": "/assets/images/exco/Aashif.png"
+    }
+  ],
+  "2025": [
+    {
+      "no": "1",
+      "position": "President",
+      "name": "M.M. Muhthaseem",
+      "nic": "200121800085",
+      "phonenumberwhatsapp": "750270257",
+      "address": "No.40/11, Ahamed Lane, Kinniya-03.",
+      "university": "University of Sri Jayewardenepura",
+      "course": "Engineering",
+      "email": "muzoufilmuhthaseem@gmail.com",
+      "photo": "/assets/images/exco/Muhthaseem.png"
+    },
+    {
+      "no": "2",
+      "position": "Secretary",
+      "name": "M.I. Aashif Ahmath",
+      "nic": "200018103744",
+      "phonenumberwhatsapp": "750113719",
+      "address": "210A, Kurincharkkerny-2, Kinniya.",
+      "university": "University of Moratuwa",
+      "course": "NDT in Electrical Engineering",
+      "email": "aasifaha119@gmail.com",
+      "photo": "/assets/images/exco/Aashif.png"
+    },
+    {
+      "no": "3",
+      "position": "Treasurer",
+      "name": "M.N.M. Fasith",
+      "nic": "200128000121",
+      "phonenumberwhatsapp": "755585008",
+      "address": "44/45, Annal Nagar, Kinniya-03.",
+      "university": "University of Ruhuna",
+      "course": "Nursing",
+      "email": "nmfasith01@gmail.com",
+      "photo": "/assets/images/exco/Fasith.png"
+    },
+    {
+      "no": "4",
+      "position": "Vice President",
+      "name": "N. Shakil Sulthan",
+      "nic": "200033602863",
+      "phonenumberwhatsapp": "750280440",
+      "address": "No.164, Aalim street, Mancholaichenai, Kinniya-03.",
+      "university": "University of Colombo",
+      "course": "Nursing",
+      "email": "shakilsul123@gmail.com",
+      "photo": "/assets/images/exco/Shakil.png"
+    },
+    {
+      "no": "5",
+      "position": "Deputy Secretary",
+      "name": "M.L.M. Ihsan",
+      "nic": "200025703607",
+      "phonenumberwhatsapp": "768316719",
+      "address": "No.60, UC Road, Kinniya-04.",
+      "university": "Rajarata University of Sri Lanka",
+      "course": "Management",
+      "email": "mohamedihsan107@gmail.com",
+      "photo": "/assets/images/exco/Ihsan.png"
+    },
+    {
+      "no": "6",
+      "position": "Deputy Treasurer",
+      "name": "T.M. Raiyan",
+      "nic": "200200203975",
+      "phonenumberwhatsapp": "750298726",
+      "address": "Arai Ekkar, Kinniya-07.",
+      "university": "University of Jaffna",
+      "course": "Nursing",
+      "email": "moraiyan2002@gmail.com",
+      "photo": "/assets/images/exco/Raiyan.png"
+    },
+    {
+      "no": "7",
+      "position": "Chief Editor",
+      "name": "A.M. Nafees",
+      "nic": "200128000300",
+      "phonenumberwhatsapp": "759797366",
+      "address": "Kakamunai 07, Kinniya.",
+      "university": "South Eastern University of Sri Lanka",
+      "course": "Biological Science",
+      "email": "amnafees2001@gmail.com",
+      "photo": "/assets/images/exco/Nafees.png"
+    },
+    {
+      "no": "8",
+      "position": "Science & Technology Coordinator",
+      "name": "M.R.M. Shajith Hussain",
+      "nic": "200107903136",
+      "phonenumberwhatsapp": "750951960",
+      "address": "No.20/B, Rahmaniya Street, Kinniya-02.",
+      "university": "Institute of Technology University of Moratuwa",
+      "course": "NDT in Electrical Engineering",
+      "email": "mrmshajith@gmail.com",
+      "photo": "/assets/images/exco/Shajith.png"
+    },
+    {
+      "no": "9",
+      "position": "Arts & Cultural Coordinator",
+      "name": "S. Rasmideen",
+      "nic": "200107904620",
+      "phonenumberwhatsapp": "756564275",
+      "address": "No.113, Mancholai, Kinniya-03.",
+      "university": "Eastern University, Sri Lanka",
+      "course": "Sociology and anthropology",
+      "email": "rasmideen01@gmail.com",
+      "photo": "/assets/images/exco/Rasmideen.png"
+    },
+    {
+      "no": "10",
+      "position": "Public Relation Coordinator",
+      "name": "M.S. Shakeeb Ahamed",
+      "nic": "200024303473",
+      "phonenumberwhatsapp": "756444697",
+      "address": "Deen street, Kurinchakerny-03, Kinniya.",
+      "university": "University of Ruhuna",
+      "course": "Financial Mathematics and Industrial Statistics",
+      "email": "shakeebahamed456@gmail.com",
+      "photo": "/assets/images/exco/Shakeeb.png"
+    }
+  ],
+  "2026": [
+    {
+      "no": "1",
+      "position": "President",
+      "name": "A.F. Riskhan Mohamed",
+      "nic": "200125500230",
+      "phonenumberwhatsapp": "0756252032",
+      "address": "38/A, Rahmaniya Road, Kinniya 02.",
+      "university": "University of Jaffna",
+      "course": "Nursing",
+      "email": "riskhanmd6572@gmail.com",
+      "photo": "/assets/images/exco/Riskhan.png"
+    },
+    {
+      "no": "2",
+      "position": "Secretary",
+      "name": "M.R.M. Rifthi",
+      "nic": "200023102307",
+      "phonenumberwhatsapp": "0772826161",
+      "address": "No:38, Abdul Gafoor Street, Kinniya-01.",
+      "university": "Wayamba University of Sri Lanka",
+      "course": "Food Production and Technology Management",
+      "email": "mrmohammedrifthy1@gmail.com",
+      "photo": "/assets/images/exco/Rifthi.png"
+    },
+    {
+      "no": "3",
+      "position": "Treasurer",
+      "name": "M.F.M. Ifkhan",
+      "nic": "200124600169",
+      "phonenumberwhatsapp": "0759777097",
+      "address": "No 22, Rahmaniya Street, Kinniya 01.",
+      "university": "Wayamba University of Sri Lanka",
+      "course": "Medicine",
+      "email": "mohamedifkhan24@gmail.com",
+      "photo": "/assets/images/exco/Ifkhan.png"
+    },
+    {
+      "no": "4",
+      "position": "Vice President",
+      "name": "A.R.M. Ijas",
+      "nic": "200218304101",
+      "phonenumberwhatsapp": "0750757434",
+      "address": "Kakkamunai 07, Kinniya.",
+      "university": "University of Peradeniya",
+      "course": "Social work",
+      "email": "ijas7066@gmail.com",
+      "photo": "/assets/images/exco/Ijas.png"
+    },
+    {
+      "no": "5",
+      "position": "Deputy Secretary",
+      "name": "A. Sahmeer",
+      "nic": "200217800214",
+      "phonenumberwhatsapp": "0767961472",
+      "address": "Adeppanavayal Kinniya.",
+      "university": "Trincomalee Campus, EUSL",
+      "course": "Physical science",
+      "email": "sahmeersahmeer125@gmail.com",
+      "photo": "/assets/images/exco/Sahmeer.png"
+    },
+    {
+      "no": "6",
+      "position": "Deputy Treasurer",
+      "name": "U.M. Atheeb",
+      "nic": "200214803864",
+      "phonenumberwhatsapp": "0752646446",
+      "address": "Kurinchakerny 03, Kinniya.",
+      "university": "Trincomalee Campus, EUSL",
+      "course": "Physical science",
+      "email": "umohamedatheeb@gmail.com",
+      "photo": "/assets/images/exco/Atheeb.png"
+    },
+    {
+      "no": "7",
+      "position": "Chief Editor",
+      "name": "A.A. Athnan",
+      "nic": "200206500430",
+      "phonenumberwhatsapp": "0754676216",
+      "address": "08, Annal Street, Kinniya-03.",
+      "university": "South Eastern University of Sri Lanka",
+      "course": "Physical Science",
+      "email": "ahamedaaa2373@gmail.com",
+      "photo": "/assets/images/exco/Athnan.png"
+    },
+    {
+      "no": "8",
+      "position": "Media Coordinator",
+      "name": "Y.A. Sharfi Azeez",
+      "nic": "200431103513",
+      "phonenumberwhatsapp": "0762333204",
+      "address": "No-57/18, Hijra Street, Kinniya-03.",
+      "university": "Sabaragamuwa University of Sri Lanka",
+      "course": "Data science",
+      "email": "sharfiazeez2004116@gmail.com",
+      "photo": "/assets/images/exco/Sharfi.png"
+    },
+    {
+      "no": "9",
+      "position": "Public Event Coordinator",
+      "name": "N.M. Riwaqi",
+      "nic": "200323012082",
+      "phonenumberwhatsapp": "0741837986",
+      "address": "Kurinjakurny 01,Kinniya.",
+      "university": "University of Vavuniya",
+      "course": "ICT",
+      "email": "nihasmohammedriwaqi@gmail.com",
+      "photo": "/assets/images/exco/Riwaqi.png"
+    },
+    {
+      "no": "10",
+      "position": "Science & Technology Coordinator",
+      "name": "M.S.M. Sajath",
+      "nic": "200311012632",
+      "phonenumberwhatsapp": "0768603855",
+      "address": "Kuttikarachi-04 Kinniya.",
+      "university": "University of Ruhuna",
+      "course": "Engineering",
+      "email": "mmsajath10867@gmail.com",
+      "photo": "/assets/images/exco/Sajath.png"
+    },
+    {
+      "no": "11",
+      "position": "Arts & Cultural Coordinator",
+      "name": "A.H.M. Abrar",
+      "nic": "200125500516",
+      "phonenumberwhatsapp": "0757817737",
+      "address": "59/2, Majeed Nagar, Kinniya.",
+      "university": "University of Peradeniya",
+      "course": "Arts",
+      "email": "mohamedabrar7515@gmail.com",
+      "photo": "/assets/images/exco/Abrar.png"
+    }
+  ],
+  "2019-21": [
+    {
+      "no": "1",
+      "position": "President, Acting Treasurer",
+      "name": "M. Karlavi Maharoof",
+      "nic": "970064176v",
+      "phonenumberwhatsapp": "778334459‬",
+      "address": "Kurinchakerny-02, Kinniya",
+      "university": null,
+      "course": null,
+      "email": null,
+      "photo": null
+    },
+    {
+      "no": "3",
+      "position": "Secretary",
+      "name": "A.M. Ihthisham",
+      "nic": "962300227v",
+      "phonenumberwhatsapp": "775157472",
+      "address": "70A, Peruntheru, Kinniya - 05",
+      "university": "University of Peradeniya",
+      "course": "Medicine",
+      "email": "ihthi96sham@gmail.com",
+      "photo": "/assets/images/exco/Ihthisham.png"
+    }
+  ]
+};

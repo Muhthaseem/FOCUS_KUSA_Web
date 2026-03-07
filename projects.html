@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="/assets/images/logo-black.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Projects | FOCUS KUSA</title>
+    <meta name="description"
+        content="Discover the educational and community projects initiated by FOCUS KUSA in Kinniya.">
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+        /* ---- Modal Overlay ---- */
+        .project-modal-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.85);
+            z-index: 1000;
+            overflow-y: auto;
+            padding: 2rem 1rem;
+            backdrop-filter: blur(6px);
+        }
+
+        .project-modal-overlay.active {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .project-modal {
+            background: var(--clr-primary-dark, #0a1628);
+            border: 1px solid rgba(232, 163, 23, 0.25);
+            border-radius: 1.25rem;
+            max-width: 800px;
+            width: 100%;
+            position: relative;
+            animation: modalIn 0.3s ease;
+            box-shadow: 0 25px 80px rgba(0, 0, 0, 0.6);
+        }
+
+        @keyframes modalIn {
+            from {
+                opacity: 0;
+                transform: scale(0.93) translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1) translateY(0);
+            }
+        }
+
+        .project-modal__close {
+            position: absolute;
+            top: 1.2rem;
+            right: 1.2rem;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            width: 38px;
+            height: 38px;
+            cursor: pointer;
+            color: var(--clr-white, #fff);
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.2s;
+        }
+
+        .project-modal__close:hover {
+            background: rgba(232, 163, 23, 0.2);
+        }
+
+        .project-modal__img-placeholder {
+            width: 100%;
+            height: 240px;
+            background: linear-gradient(135deg, rgba(232, 163, 23, 0.08), rgba(15, 52, 96, 0.5));
+            border-radius: 1.25rem 1.25rem 0 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 0.5rem;
+            border-bottom: 1px solid rgba(232, 163, 23, 0.15);
+        }
+
+        .project-modal__img-placeholder span {
+            color: rgba(255, 255, 255, 0.3);
+            font-size: 0.8rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        .project-modal__body {
+            padding: 2rem 2.5rem 2.5rem;
+        }
+
+        .project-modal__badge {
+            display: inline-block;
+            background: rgba(232, 163, 23, 0.12);
+            border: 1px solid rgba(232, 163, 23, 0.3);
+            color: var(--clr-gold, #e8a317);
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            padding: 0.3rem 0.8rem;
+            border-radius: 100px;
+            margin-bottom: 1rem;
+        }
+
+        .project-modal__title {
+            font-family: var(--font-heading, 'Outfit', sans-serif);
+            font-size: 1.6rem;
+            color: #fff;
+            margin-bottom: 0.3rem;
+        }
+
+        .project-modal__meta {
+            font-size: 0.78rem;
+            color: rgba(255, 255, 255, 0.4);
+            margin-bottom: 1.5rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .project-modal__meta span {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .project-modal__section {
+            margin-bottom: 1.4rem;
+        }
+
+        .project-modal__section h4 {
+            font-family: var(--font-heading, 'Outfit', sans-serif);
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: var(--clr-gold, #e8a317);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 0.6rem;
+        }
+
+        .project-modal__section p,
+        .project-modal__section li {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.75);
+            line-height: 1.8;
+        }
+
+        .project-modal__section ul {
+            padding-left: 1.4rem;
+        }
+
+        .project-modal__section ul li {
+            margin-bottom: 0.3rem;
+        }
+
+        .project-modal__divider {
+            border: none;
+            border-top: 1px solid rgba(255, 255, 255, 0.07);
+            margin: 1.5rem 0;
+        }
+
+        /* ---- Clickable cards ---- */
+        .project-card {
+            cursor: pointer;
+        }
+
+        .project-card:hover {
+            border-color: rgba(232, 163, 23, 0.4);
+        }
+
+        .project-card__click-hint {
+            font-size: 0.72rem;
+            color: rgba(232, 163, 23, 0.7);
+            margin-top: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        @media (max-width: 600px) {
+            .project-modal__body {
+                padding: 1.5rem 1.2rem;
+            }
+
+            .project-modal__title {
+                font-size: 1.25rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="navbar-container"></div>
+
+    <!-- PROJECT DETAIL MODAL -->
+    <div class="project-modal-overlay" id="projectModal" role="dialog" aria-modal="true">
+        <div class="project-modal" id="projectModalContent">
+            <button class="project-modal__close" id="modalClose" aria-label="Close">✕</button>
+            <div class="project-modal__img-placeholder" id="modalImgPlaceholder">
+                <img src="https://img.icons8.com/ios-filled/50/ffffff/picture.png" alt="icon" class="icon-img"
+                    style="opacity:0.3; width:2.5rem; height:2.5rem;" />
+                <span>Project images coming soon</span>
+            </div>
+            <div class="project-modal__body" id="modalBody"></div>
+        </div>
+    </div>
+
+    <main>
+        <!-- PAGE HERO -->
+        <section class="page-hero">
+            <div class="container">
+                <div class="breadcrumb reveal-scale">
+                    <a href="index.html">Home</a>
+                    <span class="breadcrumb__separator">/</span>
+                    <span>Projects</span>
+                </div>
+                <h1 class="page-hero__title reveal"><span class="gold">Our</span> Initiatives</h1>
+                <p class="page-hero__subtitle reveal" style="transition-delay: 100ms;">
+                    From academic seminars to community plantations — explore every project we run to uplift our
+                    community. Click any card for full details.
+                </p>
+            </div>
+        </section>
+
+        <!-- PROJECTS SECTION -->
+        <section class="section">
+            <div class="container">
+
+                <!-- Filter Bar -->
+                <div class="filter-bar reveal">
+                    <button class="filter-btn active" data-filter="all">All Projects</button>
+                    <button class="filter-btn" data-filter="guidance">Guidance</button>
+                    <button class="filter-btn" data-filter="academic">Academic</button>
+                    <button class="filter-btn" data-filter="competitions">Competitions</button>
+                    <button class="filter-btn" data-filter="seminars">Seminars</button>
+                    <button class="filter-btn" data-filter="community">Community</button>
+                    <button class="filter-btn" data-filter="welcoming">Welcoming</button>
+                </div>
+
+                <!-- Projects Grid -->
+                <div class="projects-grid stagger-children" id="projectsGrid">
+
+                    <!-- 1. Pi Challenge -->
+                    <div class="project-card reveal" data-category="competitions" data-project="pi-challenge">
+                        <div class="project-card__image">
+                            <span class="project-card__icon"><img
+                                    src="https://img.icons8.com/ios-filled/50/ffffff/pi.png" alt="icon"
+                                    class="icon-img" /></span>
+                            <span class="project-card__badge">Competition</span>
+                        </div>
+                        <div class="project-card__body">
+                            <div class="project-card__category">Mathematics Olympiad</div>
+                            <h3 class="project-card__title">Pi Challenge 2025</h3>
+                            <p class="project-card__desc">A dynamic Mathematics Olympiad uniting 300+ students from
+                                across the Kinniya Educational Zone across Junior, Intermediate, and Senior categories.
+                            </p>
+                            <div class="project-card__year"><img
+                                    src="https://img.icons8.com/ios-filled/50/ffffff/calendar--v1.png" alt="icon"
+                                    class="icon-img" /> 2025</div>
+                            <p class="project-card__click-hint"><img
+                                    src="https://img.icons8.com/ios-filled/50/ffffff/info.png" alt="" class="icon-img"
+                                    style="width:0.9em;height:0.9em;opacity:0.7;" /> Click for full details</p>
+                        </div>
+                    </div>
+
+                    <!-- 2. Focus Stride -->
+                    <div class="project-card reveal" data-category="academic" data-project="focus-stride">
+                        <div class="project-card__image">
+                            <span class="project-card__icon"><img
+                                    src="https://img.icons8.com/ios-filled/50/ffffff/test-tube.png" alt="icon"
+                                    class="icon-img" /></span>
+                            <span class="project-card__badge">Academic</span>
+                        </div>
+                        <div class="project-card__body">
+                            <div class="project-card__category">Exam Preparation</div>
+                            <h3 class="project-card__title">Focus Stride 2024</h3>
+                            <p class="project-card__desc">A pilot A/L Science stream mock examination series spanning
+                                Kinniya, Mutur & Kantale zones, simulating real exam conditions.</p>
+                            <div class="project-card__year"><img
+                                    src="https://img.icons8.com/ios-filled/50/ffffff/calendar--v1.png" alt="icon"
+                                    class="icon-img" /> Aug–Sep 2024</div>
+                            <p class="project-card__click-hint"><img
+                                    src="https://img.icons8.com/ios-filled/50/ffffff/info.png" alt="" class="icon-img"
+                                    style="width:0.9em;height:0.9em;opacity:0.7;" /> Click for full details</p>
+                        </div>
+                    </div>
+
+                    <!-- 3. UniVision -->
+                    <div class="project-card reveal" data-category="guidance" data-project="univision">
+                        <div class="project-card__image">
+                            <span class="project-card__icon"><img
+                                    src="https://img.icons8.com/ios-filled/50/ffffff/museum.png" alt="icon"
+                                    class="icon-img" /></span>
+                            <span class="project-card__badge">Guidance</span>
+                        </div>
+                        <div class="project-card__body">
+                            <div class="project-card__category">University Guidance</div>
+                            <h3 class="project-card__title">UniVision (2023–2025)</h3>
+                            <p class="project-card__desc">Annual free guidance program offering stream-wise university
+                                course selection support for A/L pass students preparing for university entrance.</p>
+                            <div class="project-card__year"><img
+                                    src="https://img.icons8.com/ios-filled/50/ffffff/calendar--v1.png" alt="icon"
+                                    class="icon-img" /> Annual Event</div>
+                            <p class="project-card__click-hint"><img
+                                    src="https://img.icons8.com/ios-filled/50/ffffff/info.png" alt="" class="icon-img"
+                                    style="width:0.9em;height:0.9em;opacity:0.7;" /> Click for full details</p>
+                        </div>
+                    </div>
+
+                    <!-- 4. Explore A/L -->
+                    <div class="project-card reveal" data-category="guidance" data-project="explore-al">
+                        <div class="project-card__image">
+                            <span class="project-card__icon"><img
+                                    src="https://img.icons8.com/ios-filled/50/ffffff/compass--v1.png" alt="icon"
+                                    class="icon-img" /></span>
+                            <span class="project-card__badge">Guidance</span>
+                        </div>
+                        <div class="project-card__body">
+                            <div class="project-card__category">Stream Guidance</div>
+                            <h3 class="project-card__title">Explore A/L (2023–2025)</h3>
+                            <p class="project-card__desc">Annual program guiding O/L graduates to understand A/L subject
+                                streams, career opportunities, and make informed academic choices.</p>
+                            <div class="project-card__year"><img
+                                    src="https://img.icons8.com/ios-filled/50/ffffff/calendar--v1.png" alt="icon"
+                                    class="icon-img" /> Annual Event</div>
+                            <p class="project-card__click-hint"><img
+                                    src="https://img.icons8.com/ios-filled/50/ffffff/info.png" alt="" class="icon-img"
+                                    style="width:0.9em;height:0.9em;opacity:0.7;" /> Click for full details</p>
+                        </div>
+                    </div>
+
+                    <!-- 5. Uni Registration -->
+                    <div class="project-card reveal" data-category="guidance" data-project="uni-registration">
+                        <div class="project-card__image">
+                            <span class="project-card__icon"><img
+                                    src="https://img.icons8.com/ios-filled/50/ffffff/laptop.png" alt="icon"
+                                    class="icon-img" /></span>
+                            <span class="project-card__badge">Guidance</span>
+                        </div>
+                        <div class="project-card__body">
+                            <div class="project-card__category">University Support</div>
+                            <h3 class="project-card__title">University Registration 2025</h3>
+                            <p class="project-card__desc">Free UGC online registration support for newly selected
+                                undergraduates, organized in collaboration with ITDLH Kinniya.</p>
+                            <div class="project-card__year"><img
+                                    src="https://img.icons8.com/ios-filled/50/ffffff/calendar--v1.png" alt="icon"
+                                    class="icon-img" /> May 2025</div>
+                            <p class="project-card__click-hint"><img
+                                    src="https://img.icons8.com/ios-filled/50/ffffff/info.png" alt="" class="icon-img"
+                                    style="width:0.9em;height:0.9em;opacity:0.7;" /> Click for full details</p>
+                        </div>
+                    </div>
+
+                    <!-- 6. Ilm Jaaiz -->
+                    <div class="project-card reveal" data-category="competitions" data-project="ilm-jaaiz">
+                        <div class="project-card__image">
+                            <span class="project-card__icon"><img
+                                    src="https://img.icons8.com/ios-filled/50/ffffff/star-and-crescent.png" alt="icon"
+                                    class="icon-img" /></span>
+                            <span class="project-card__badge">Competition</span>
+                        </div>
+                        <div class="project-card__body">
+                            <div class="project-card__category">Knowledge Quiz</div>
+                            <h3 class="project-card__title">Ilm Jaa'iz 2025</h3>
+                            <p class="project-card__desc">A Ramadan special knowledge quiz competition open to
+                                participants across Sri Lanka, promoting learning and intellectual growth.</p>
+                            <div class="project-card__year"><img
+                                    src="https://img.icons8.com/ios-filled/50/ffffff/calendar--v1.png" alt="icon"
+                                    class="icon-img" /> Ramadan 2025</div>
+                            <p class="project-card__click-hint"><img
+                                    src="https://img.icons8.com/ios-filled/50/ffffff/info.png" alt="" class="icon-img"
+                                    style="width:0.9em;height:0.9em;opacity:0.7;" /> Click for full details</p>
+                        </div>
+                    </div>
+
+                    <!-- 7. Fresher's Welcome -->
+                    <div class="project-card reveal" data-category="welcoming" data-project="freshers-welcome">
+                        <div class="project-card__image">
+                            <span class="project-card__icon"><img
+                                    src="https://img.icons8.com/ios-filled/50/ffffff/student-center.png" alt="icon"
+                                    class="icon-img" /></span>
+                            <span class="project-card__badge">Welcoming</span>
+                        </div>
+                        <div class="project-card__body">
+                            <div class="project-card__category">Annual Felicitation</div>
+                            <h3 class="project-card__title">Fresher's Welcome 2025</h3>
+                            <p class="project-card__desc">Annual celebration officially inducting new undergraduates
+                                from the Kinniya Zone into the FOCUS KUSA community with warmth and recognition.</p>
+                            <div class="project-card__year"><img
+                                    src="https://img.icons8.com/ios-filled/50/ffffff/calendar--v1.png" alt="icon"
+                                    class="icon-img" /> Feb 2025</div>
+                            <p class="project-card__click-hint"><img
+                                    src="https://img.icons8.com/ios-filled/50/ffffff/info.png" alt="" class="icon-img"
+                                    style="width:0.9em;height:0.9em;opacity:0.7;" /> Click for full details</p>
+                        </div>
+                    </div>
+
+                    <!-- 8. Arduino Robotic -->
+                    <div class="project-card reveal" data-category="seminars" data-project="arduino">
+                        <div class="project-card__image">
+                            <span class="project-card__icon"><img
+                                    src="https://img.icons8.com/ios-filled/50/ffffff/circuit.png" alt="icon"
+                                    class="icon-img" /></span>
+                            <span class="project-card__badge">Workshop</span>
+                        </div>
+                        <div class="project-card__body">
+                            <div class="project-card__category">Technology Workshop</div>
+                            <h3 class="project-card__title">Arduino Robotic Seminar 2024</h3>
+                            <p class="project-card__desc">Hands-on robotics and embedded systems workshop for Grades
+                                9–13, organized in collaboration with the Rotaract Club of University of Moratuwa.</p>
+                            <div class="project-card__year"><img
+                                    src="https://img.icons8.com/ios-filled/50/ffffff/calendar--v1.png" alt="icon"
+                                    class="icon-img" /> Jan 2024</div>
+                            <p class="project-card__click-hint"><img
+                                    src="https://img.icons8.com/ios-filled/50/ffffff/info.png" alt="" class="icon-img"
+                                    style="width:0.9em;height:0.9em;opacity:0.7;" /> Click for full details</p>
+                        </div>
+                    </div>
+
+                    <!-- 9. AL Science Seminar -->
+                    <div class="project-card reveal" data-category="seminars" data-project="science-seminar">
+                        <div class="project-card__image">
+                            <span class="project-card__icon"><img
+                                    src="https://img.icons8.com/ios-filled/50/ffffff/physics.png" alt="icon"
+                                    class="icon-img" /></span>
+                            <span class="project-card__badge">Seminar</span>
+                        </div>
+                        <div class="project-card__body">
+                            <div class="project-card__category">Exam Support</div>
+                            <h3 class="project-card__title">A/L Science Seminar Series 2023</h3>
+                            <p class="project-card__desc">Free A/L Physics exam support seminar conducted by pre-medical
+                                and pre-engineering university students to strengthen student confidence.</p>
+                            <div class="project-card__year"><img
+                                    src="https://img.icons8.com/ios-filled/50/ffffff/calendar--v1.png" alt="icon"
+                                    class="icon-img" /> Dec 2023</div>
+                            <p class="project-card__click-hint"><img
+                                    src="https://img.icons8.com/ios-filled/50/ffffff/info.png" alt="" class="icon-img"
+                                    style="width:0.9em;height:0.9em;opacity:0.7;" /> Click for full details</p>
+                        </div>
+                    </div>
+
+                    <!-- 10. OL Math Seminar -->
+                    <div class="project-card reveal" data-category="seminars" data-project="ol-math-seminar">
+                        <div class="project-card__image">
+                            <span class="project-card__icon"><img
+                                    src="https://img.icons8.com/ios-filled/50/ffffff/divide.png" alt="icon"
+                                    class="icon-img" /></span>
+                            <span class="project-card__badge">Seminar</span>
+                        </div>
+                        <div class="project-card__body">
+                            <div class="project-card__category">Exam Support</div>
+                            <h3 class="project-card__title">O/L Mathematics Seminar 2023</h3>
+                            <p class="project-card__desc">Full-day free mathematics seminar for GCE O/L students
+                                organized in collaboration with University of Moratuwa Majlis Ul Islam and KCC Old Boys'
+                                Association.</p>
+                            <div class="project-card__year"><img
+                                    src="https://img.icons8.com/ios-filled/50/ffffff/calendar--v1.png" alt="icon"
+                                    class="icon-img" /> Dec 2023</div>
+                            <p class="project-card__click-hint"><img
+                                    src="https://img.icons8.com/ios-filled/50/ffffff/info.png" alt="" class="icon-img"
+                                    style="width:0.9em;height:0.9em;opacity:0.7;" /> Click for full details</p>
+                        </div>
+                    </div>
+
+                    <!-- 11. Brilliant Brushes -->
+                    <div class="project-card reveal" data-category="competitions" data-project="brilliant-brushes">
+                        <div class="project-card__image">
+                            <span class="project-card__icon"><img
+                                    src="https://img.icons8.com/ios-filled/50/ffffff/paint-palette.png" alt="icon"
+                                    class="icon-img" /></span>
+                            <span class="project-card__badge">Competition</span>
+                        </div>
+                        <div class="project-card__body">
+                            <div class="project-card__category">Arts Competition</div>
+                            <h3 class="project-card__title">Brilliant Brushes 2022</h3>
+                            <p class="project-card__desc">An art competition celebrating creativity with 70 young
+                                artists, evaluated by professional artists with cash prizes for top works.</p>
+                            <div class="project-card__year"><img
+                                    src="https://img.icons8.com/ios-filled/50/ffffff/calendar--v1.png" alt="icon"
+                                    class="icon-img" /> Jan 2023</div>
+                            <p class="project-card__click-hint"><img
+                                    src="https://img.icons8.com/ios-filled/50/ffffff/info.png" alt="" class="icon-img"
+                                    style="width:0.9em;height:0.9em;opacity:0.7;" /> Click for full details</p>
+                        </div>
+                    </div>
+
+                    <!-- 12. Math Class Series -->
+                    <div class="project-card reveal" data-category="academic" data-project="math-classes">
+                        <div class="project-card__image">
+                            <span class="project-card__icon"><img
+                                    src="https://img.icons8.com/ios-filled/50/ffffff/books.png" alt="icon"
+                                    class="icon-img" /></span>
+                            <span class="project-card__badge">Academic</span>
+                        </div>
+                        <div class="project-card__body">
+                            <div class="project-card__category">Academic Support</div>
+                            <h3 class="project-card__title">Mathematics Class Series 2022–23</h3>
+                            <p class="project-card__desc">Structured G11 mathematics tuition series across two schools
+                                from Oct 2022 to Jan 2023, boosting problem-solving skills for ~70 students.</p>
+                            <div class="project-card__year"><img
+                                    src="https://img.icons8.com/ios-filled/50/ffffff/calendar--v1.png" alt="icon"
+                                    class="icon-img" /> Oct 2022 – Jan 2023</div>
+                            <p class="project-card__click-hint"><img
+                                    src="https://img.icons8.com/ios-filled/50/ffffff/info.png" alt="" class="icon-img"
+                                    style="width:0.9em;height:0.9em;opacity:0.7;" /> Click for full details</p>
+                        </div>
+                    </div>
+
+                    <!-- 13. Zero W -->
+                    <div class="project-card reveal" data-category="academic" data-project="zero-w">
+                        <div class="project-card__image">
+                            <span class="project-card__icon"><img
+                                    src="https://img.icons8.com/ios-filled/50/ffffff/zero.png" alt="icon"
+                                    class="icon-img" /></span>
+                            <span class="project-card__badge">Academic</span>
+                        </div>
+                        <div class="project-card__body">
+                            <div class="project-card__category">School Transformation</div>
+                            <h3 class="project-card__title">Zero W Project 2023</h3>
+                            <p class="project-card__desc">A mission to eliminate O/L Mathematics 'W' grades in rural
+                                village schools in Kinniya through focused teaching methods and student support.</p>
+                            <div class="project-card__year"><img
+                                    src="https://img.icons8.com/ios-filled/50/ffffff/calendar--v1.png" alt="icon"
+                                    class="icon-img" /> Aug 2023</div>
+                            <p class="project-card__click-hint"><img
+                                    src="https://img.icons8.com/ios-filled/50/ffffff/info.png" alt="" class="icon-img"
+                                    style="width:0.9em;height:0.9em;opacity:0.7;" /> Click for full details</p>
+                        </div>
+                    </div>
+
+                    <!-- 14. Path Finder -->
+                    <div class="project-card reveal" data-category="guidance" data-project="path-finder">
+                        <div class="project-card__image">
+                            <span class="project-card__icon"><img
+                                    src="https://img.icons8.com/ios-filled/50/ffffff/road.png" alt="icon"
+                                    class="icon-img" /></span>
+                            <span class="project-card__badge">Guidance</span>
+                        </div>
+                        <div class="project-card__body">
+                            <div class="project-card__category">Career Guidance</div>
+                            <h3 class="project-card__title">Path Finder 2022</h3>
+                            <p class="project-card__desc">Career guidance program for the 2021 A/L batch at KCC,
+                                featuring expert guest speakers and interactive sessions to help 68 students plan their
+                                futures.</p>
+                            <div class="project-card__year"><img
+                                    src="https://img.icons8.com/ios-filled/50/ffffff/calendar--v1.png" alt="icon"
+                                    class="icon-img" /> Sep 2022</div>
+                            <p class="project-card__click-hint"><img
+                                    src="https://img.icons8.com/ios-filled/50/ffffff/info.png" alt="" class="icon-img"
+                                    style="width:0.9em;height:0.9em;opacity:0.7;" /> Click for full details</p>
+                        </div>
+                    </div>
+
+                    <!-- 15. GreenRise -->
+                    <div class="project-card reveal" data-category="community" data-project="greenrise">
+                        <div class="project-card__image">
+                            <span class="project-card__icon"><img
+                                    src="https://img.icons8.com/ios-filled/50/ffffff/plant-under-sun.png" alt="icon"
+                                    class="icon-img" /></span>
+                            <span class="project-card__badge">Community</span>
+                        </div>
+                        <div class="project-card__body">
+                            <div class="project-card__category">Environmental Initiative</div>
+                            <h3 class="project-card__title">GreenRise 2025</h3>
+                            <p class="project-card__desc">Community-driven environmental initiative donating plants to
+                                five Kinniya schools and promoting sustainability and tree-planting among students.</p>
+                            <div class="project-card__year"><img
+                                    src="https://img.icons8.com/ios-filled/50/ffffff/calendar--v1.png" alt="icon"
+                                    class="icon-img" /> Oct 2025</div>
+                            <p class="project-card__click-hint"><img
+                                    src="https://img.icons8.com/ios-filled/50/ffffff/info.png" alt="" class="icon-img"
+                                    style="width:0.9em;height:0.9em;opacity:0.7;" /> Click for full details</p>
+                        </div>
+                    </div>
+
+                    <!-- 16. Seeds of Impact -->
+                    <div class="project-card reveal" data-category="academic" data-project="seeds-of-impact">
+                        <div class="project-card__image">
+                            <span class="project-card__icon"><img
+                                    src="https://img.icons8.com/ios-filled/50/ffffff/seedling.png" alt="icon"
+                                    class="icon-img" /></span>
+                            <span class="project-card__badge">Academic</span>
+                        </div>
+                        <div class="project-card__body">
+                            <div class="project-card__category">Community Education</div>
+                            <h3 class="project-card__title">Seeds of Impact 2025</h3>
+                            <p class="project-card__desc">O/L Mathematics support program conducted at T/Kin Dharul
+                                Uloom M.V., in collaboration with SEUSL, empowering O/L students through guided
+                                learning.</p>
+                            <div class="project-card__year"><img
+                                    src="https://img.icons8.com/ios-filled/50/ffffff/calendar--v1.png" alt="icon"
+                                    class="icon-img" /> Oct 2025</div>
+                            <p class="project-card__click-hint"><img
+                                    src="https://img.icons8.com/ios-filled/50/ffffff/info.png" alt="" class="icon-img"
+                                    style="width:0.9em;height:0.9em;opacity:0.7;" /> Click for full details</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- CALL TO ACTION -->
+        <section class="section section--dark" style="border-top: 1px solid rgba(232, 163, 23, 0.1);">
+            <div class="container text-center reveal-scale">
+                <h2 class="section-title" style="margin-bottom: var(--sp-4);">Partner With <span class="gold">Us</span>
+                </h2>
+                <p class="section-subtitle" style="margin: 0 auto var(--sp-8);">We are always looking for collaborators,
+                    sponsors, and educators to expand our reach. Let's work together to build a brighter future for
+                    Kinniya.</p>
+                <div style="display: flex; justify-content: center;">
+                    <a href="contact.html" class="btn btn--primary">Get in Touch</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer-container"></div>
+
+    <script type="module">
+        import { renderNavbar, renderFooter } from './js/main.js';
+        document.getElementById('navbar-container').innerHTML = renderNavbar('projects.html');
+        document.getElementById('footer-container').innerHTML = renderFooter();
+
+        // ---- Project Details Data ----
+        const projects = {
+            "pi-challenge": {
+                badge: "Mathematics Olympiad",
+                title: "FOCUS Pi Challenge 2025",
+                meta: [
+                    { icon: "calendar--v1", text: "July 5 – August 2, 2025" },
+                    { icon: "marker", text: "T/Kin/Al-Hira M.G.M.V. & Library Hall, Kinniya" },
+                    { icon: "crowd.png", text: "300+ Participants" }
+                ],
+                sections: [
+                    { heading: "Overview", content: "<p>FOCUS KUSA proudly presented Pi Challenge 2025 — <em>Think Smart. Solve Fast.</em> — a dynamic mathematics Olympiad uniting participants from across the Kinniya Educational Zone. The competition embraced three distinct categories: Junior (Grade 6), Intermediate (Grades 7 & 8), and Senior (Grades 9, 10 & 11).</p>" },
+                    { heading: "Competition Rounds", content: "<ul><li><strong>Round 1 (July 5, 2025)</strong> at T/Kin/Al-Hira M.G.M.V. — selected the Top 20 students in each category.</li><li><strong>Round 2 (July 19, 2025)</strong> at T/Kin/Al-Hira M.G.M.V. — narrowed the field to the Top 3 winners.</li><li>Conducted in Tamil and English mediums. Over <strong>300 students</strong> participated in Round 1.</li></ul>" },
+                    { heading: "Support & Preparation", content: "<ul><li>Intro & Guide Session on July 1, 2025.</li><li>Detailed Explanation Sessions on July 7, 2025.</li></ul>" },
+                    { heading: "Grand Finale & Awards", content: "<p>The Awarding Ceremony was held on <strong>August 2, 2025</strong> at the Library Hall, Kinniya. Chief Guest: Mrs. Z.M.M. Naleem (Zonal Director of Education). Winners received <strong>cash prizes and certificates</strong>.</p>" },
+                    { heading: "Impact", content: "<p>This competition ignited curiosity, sharpened analytical thinking, and fostered academic excellence. With robust turnout and expert coaching, Pi Challenge 2025 marked a milestone in FOCUS KUSA's mission to empower student potential through education.</p>" }
+                ]
+            },
+            "focus-stride": {
+                badge: "Exam Preparation",
+                title: "Focus Stride 2024 – A/L Pilot Examination",
+                meta: [
+                    { icon: "calendar--v1", text: "24 Aug – 16 Sep 2024 (Saturdays & Sundays, 2PM+)" },
+                    { icon: "marker", text: "Kinniya, Mutur & Kantale Zones" }
+                ],
+                sections: [
+                    { heading: "Overview", content: "<p>A preparatory pilot examination series designed to strengthen the readiness of A/L Science stream students across the Kinniya, Mutur, and Kantale zones.</p>" },
+                    { heading: "Exam Venues", content: "<ul><li>T/Kin/ Al-Hira M.V. & T/Kin/ Boys' School (Kinniya Zone)</li><li>T/Mu/ Central College N.S. (Mutur Zone)</li><li>T/Kan/ Al-Tharique M.V. (Kantale Zone)</li></ul>" },
+                    { heading: "Objectives", content: "<ul><li>Simulate the real A/L exam environment.</li><li>Provide students with zonal-level ranking experience.</li><li>Enhance exam techniques and time management skills.</li><li>Identify strengths and improvement areas for students and teachers.</li></ul>" },
+                    { heading: "Exam Schedule", content: "<ul><li>Combined Mathematics & Biology – Parts 1 & 2 (1st & 3rd Sep 2024)</li><li>Physics – Parts 1 & 2 (7th & 8th Sep 2024)</li><li>Chemistry – Parts 1 & 2 (14th & 16th Sep 2024)</li></ul>" },
+                    { heading: "Results & Recognition", content: "<p>Results were released online. Prize money and certificates for winners were awarded during the AGM held on <strong>2nd February 2025</strong>. All exam papers were made publicly accessible for further practice.</p>" }
+                ]
+            },
+            "univision": {
+                badge: "University Guidance",
+                title: "UniVision – Annual University Guidance Program",
+                meta: [
+                    { icon: "calendar--v1", text: "Sep 2023 / Jun 2024 / May 2025" },
+                    { icon: "marker", text: "KCC Main Hall / Kinniya Public Library / Al-Aqsa National School" }
+                ],
+                sections: [
+                    { heading: "UniVision 2025", content: "<p>A <strong>100% free</strong> student guidance program for students receiving 2024 A/L results. Held on <strong>3rd May 2025</strong> at Al-Aqsa National School (from 8:30 AM). Featured stream-wise sessions (Science, Maths, Commerce, Arts, Technology) by undergraduates from prestigious universities.</p><ul><li>How to apply for university — step-by-step</li><li>Pros & cons of different courses</li><li>How to prioritize courses strategically</li></ul>" },
+                    { heading: "UniVision 2024", content: "<p>Held on <strong>15th June 2024</strong> at Kinniya Public Library Hall. Sessions focused on university application guidance, stream-wise course selection, and building long-term academic planning skills.</p>" },
+                    { heading: "UniVision 2023 – The Inaugural", content: "<p>Launched on <strong>17th September 2023</strong> at Kinniya Central College Main Hall (8:00 AM onwards). Brought together <strong>over 200 A/L pass students</strong>. Created a platform for direct interaction with state university undergraduates. Special thanks to <em>Sumra Poultry Farm</em> for sponsoring the sound system.</p>" }
+                ]
+            },
+            "explore-al": {
+                badge: "Stream Guidance",
+                title: "Explore A/L – Annual Stream Guidance Program",
+                meta: [
+                    { icon: "calendar--v1", text: "Jun 2023 / May 2024 / Apr 2025" },
+                    { icon: "marker", text: "Kinniya Central College Hall / Abdul Majeed Hall" }
+                ],
+                sections: [
+                    { heading: "Explore A/L 2025", content: "<p>Held on <strong>5th April 2025</strong> at Abdul Majeed Hall, KCC. Featured expanded stream coverage, expert speakers, interactive Q&A, and a stronger career focus highlighting future academic and career opportunities for each stream.</p>" },
+                    { heading: "Explore A/L 2024", content: "<p>Held on <strong>19th May 2024</strong> at Kinniya Central College Hall. Featured a structured framework covering ten essential topics: exploring interests, researching options, seeking guidance, developing study habits, extracurriculars, exam preparation, wellbeing, networking, and persistence.</p>" },
+                    { heading: "Explore A/L 2023", content: "<p>Held on <strong>18th June 2023</strong> at Kinniya Central College Hall. Welcomed nearly <strong>200 O/L graduates</strong>. Focused on motivating students to explore their interests and understand different subject streams.</p>" },
+                    { heading: "Streams Covered", content: "<ul><li>Biological Science</li><li>Physical Science</li><li>Arts</li><li>Commerce</li><li>Engineering Technology</li><li>Bio System Technology</li></ul>" }
+                ]
+            },
+            "uni-registration": {
+                badge: "University Support",
+                title: "University Registration 2025 – Free UGC Application Support",
+                meta: [
+                    { icon: "calendar--v1", text: "11th May 2025" },
+                    { icon: "marker", text: "ITDLH Kinniya, T/Kin Al-Haj Ehuthar Vidyalaya" }
+                ],
+                sections: [
+                    { heading: "Overview", content: "<p>Organized in collaboration with ITDLH Kinniya, this program assisted students newly selected for state universities to complete their UGC online registration <strong>free of charge</strong>.</p>" },
+                    { heading: "How It Worked", content: "<p>Students reserved slots online according to their token numbers, ensuring a smooth and organized process. The program was successfully managed by the FOCUS KUSA Registration Crew and Volunteers.</p>" },
+                    { heading: "Acknowledgment", content: "<p>Heartfelt appreciation to <strong>ITDLH Kinniya</strong> for their continuous partnership and support in making higher education accessible to students of the Kinniya region.</p>" }
+                ]
+            },
+            "ilm-jaaiz": {
+                badge: "Ramadan Quiz Competition",
+                title: "Ilm Jaa'iz 2025 – A Celebration of Knowledge",
+                meta: [
+                    { icon: "calendar--v1", text: "Throughout Ramadan 2025" },
+                    { icon: "marker", text: "Online (FOCUS KUSA Social Media & WhatsApp)" }
+                ],
+                sections: [
+                    { heading: "Competition Format", content: "<ul><li><strong>Round 1 (MCQs):</strong> Ramadan 5–11 – Daily MCQs. Top 3 winners recognized.</li><li><strong>Round 2 (One-Word):</strong> Ramadan 13–18 – Daily answers. Top 2 winners recognized.</li><li><strong>Round 3 (Grand Final):</strong> Ramadan 20–25 – Determining the overall champion.</li></ul>" },
+                    { heading: "Winners", content: "<ul><li><strong>Round 1:</strong> Riskhan M. (Kinniya), AH. Yoonus (Puttalam), MNM. Aflal (Kinniya)</li><li><strong>Round 2:</strong> MF. Sahla (Matale), RM. Sahrees (Kinniya)</li><li><strong>Round 3:</strong> MFT. Riska</li><li><strong>Grand Champion 2025:</strong> Riskhan Mohamed — 1,310 total points. Cash prize: LKR 3,000.</li></ul>" },
+                    { heading: "Prize Pool", content: "<ul><li>Round 1: LKR 500 each (Top 3)</li><li>Round 2: LKR 1,000 each (Top 2)</li><li>Round 3: LKR 3,000 (Grand Champion)</li></ul>" }
+                ]
+            },
+            "freshers-welcome": {
+                badge: "Annual Felicitation",
+                title: "Fresher's Welcome 2025",
+                meta: [
+                    { icon: "calendar--v1", text: "Saturday, 22nd February 2025, 4:00 PM onwards" },
+                    { icon: "marker", text: "Zonal Office Hall, Kinniya" },
+                    { icon: "crowd.png", text: "38 New Undergraduates" }
+                ],
+                sections: [
+                    { heading: "Overview", content: "<p>FOCUS KUSA hosted the Annual Fresher's Welcome 2025 to officially induct students from the <strong>2023 A/L batch</strong> of the Kinniya Zone who successfully entered state universities.</p>" },
+                    { heading: "Highlights", content: "<ul><li>A total of <strong>38 male students</strong> from all academic streams were officially recognized.</li><li>Program featured celebration and connection events to help new members bond and share aspirations.</li><li>New undergraduates were warmly welcomed into the FOCUS KUSA community.</li></ul>" }
+                ]
+            },
+            "arduino": {
+                badge: "Technology Workshop",
+                title: "Arduino Robotic Seminar 2024",
+                meta: [
+                    { icon: "calendar--v1", text: "17th January 2024, 9:00 AM – 1:00 PM" },
+                    { icon: "marker", text: "Kinniya Zonal Office Hall" },
+                    { icon: "crowd.png", text: "Students Grades 9–13" }
+                ],
+                sections: [
+                    { heading: "About", content: "<p>Organized by FOCUS KUSA in collaboration with the <strong>Rotaract Club of the University of Moratuwa</strong>, this hands-on seminar empowered school students with practical knowledge in robotics and embedded systems.</p>" },
+                    { heading: "Highlights", content: "<ul><li>Interactive sessions with Arduino hardware.</li><li>Live demonstrations of robotic systems and automation projects.</li><li>Guidance from experienced facilitators simplifying complex concepts.</li><li>Focus on creativity, teamwork, and innovation.</li></ul>" },
+                    { heading: "Impact", content: "<p>Students gained early exposure to cutting-edge technology and were inspired to explore future careers in robotics, engineering, and innovation.</p>" }
+                ]
+            },
+            "science-seminar": {
+                badge: "A/L Physics Support",
+                title: "A/L Science Stream Seminar Series 2023",
+                meta: [
+                    { icon: "calendar--v1", text: "Saturday, 23rd December 2023, 7:30 AM onwards" },
+                    { icon: "marker", text: "KCC Multimedia Hall, Kinniya" }
+                ],
+                sections: [
+                    { heading: "Overview", content: "<p>A free seminar providing ultimate guidance for GCE A/L students preparing for the <strong>Physics examination</strong>, led by pre-medical and pre-engineering student volunteers from leading state universities.</p>" },
+                    { heading: "Highlights", content: "<ul><li>Comprehensive discussion of Physics support seminar papers.</li><li>Clearing of doubts and strengthening of exam strategies.</li><li>Rich learning environment helping students unlock complex Physics concepts.</li></ul>" }
+                ]
+            },
+            "ol-math-seminar": {
+                badge: "O/L Math Support",
+                title: "O/L Mathematics Seminar Series 2023",
+                meta: [
+                    { icon: "calendar--v1", text: "30th December 2023, 8:00 AM – 4:00 PM" },
+                    { icon: "marker", text: "Abdul Majeed Hall, Kinniya Central College" }
+                ],
+                sections: [
+                    { heading: "About", content: "<p>Organized by University of Moratuwa Majlis Ul Islam in collaboration with FOCUS KUSA and generously supported by the T/Kin/KCC Old Boys' Association.</p>" },
+                    { heading: "Highlights", content: "<ul><li>Full-day free seminar covering key GCE O/L Mathematics areas.</li><li>Sessions improving exam readiness, conceptual understanding, and problem-solving skills.</li></ul>" },
+                    { heading: "Acknowledgments", content: "<ul><li>T/Kin/Kinniya Central College Old Boys' Association — refreshments, hall & sound.</li><li>University of Moratuwa Majlis Ul Islam — collaboration and academic support.</li></ul>" }
+                ]
+            },
+            "brilliant-brushes": {
+                badge: "Arts Competition",
+                title: "Brilliant Brushes 2022 – Art Competition",
+                meta: [
+                    { icon: "calendar--v1", text: "January 7, 2023" },
+                    { icon: "marker", text: "T/Kin/Abdul Majeed Vidyalayam (Award: Zonal Office, Kinniya)" },
+                    { icon: "crowd.png", text: "70 Students" }
+                ],
+                sections: [
+                    { heading: "Objective", content: "<p>To encourage students' interest in painting and provide a platform to showcase their artistic talents.</p>" },
+                    { heading: "Awards", content: "<ul><li>1st Prize – Rs. 10,000</li><li>2nd Prize – Rs. 5,000</li><li>3rd Prize – Rs. 3,000</li><li>All other participants received certificates of participation.</li></ul>" },
+                    { heading: "Evaluation", content: "<p>All paintings were evaluated by <strong>professional artists</strong>. The award ceremony was held at the Zonal Office, Kinniya.</p>" }
+                ]
+            },
+            "math-classes": {
+                badge: "Academic Support",
+                title: "Mathematics Class Series for O/L Students 2022–23",
+                meta: [
+                    { icon: "calendar--v1", text: "October 2022 – January 2023" },
+                    { icon: "marker", text: "T/Kin/Kurinchakerny Arafa M.V. & T/Kin/Periya Kinniya Boys' School" },
+                    { icon: "crowd.png", text: "~70 Students (Grade 11)" }
+                ],
+                sections: [
+                    { heading: "About", content: "<p>A structured Mathematics Seminar Series for Grade 11 students, offering interactive learning to deepen mathematical understanding and foster a passion for the subject.</p>" },
+                    { heading: "Key Activities", content: "<ul><li>Interactive teaching using model and past papers.</li><li>Student–teacher interactive discussions.</li><li>On-the-spot paper correction immediately after examinations.</li><li>Motivational sessions for students.</li></ul>" }
+                ]
+            },
+            "zero-w": {
+                badge: "School Transformation",
+                title: "Zero W Project 2023 – Transforming Village Schools Through Mathematics",
+                meta: [
+                    { icon: "calendar--v1", text: "Launched 14th August 2023" },
+                    { icon: "marker", text: "T/Kin/Millipithana Central College, T/Kin/Dharus Salam M.V., T/Kin/Siraj M.V." }
+                ],
+                sections: [
+                    { heading: "Mission", content: "<p>To reduce the number of 'W' grades in G.C.E. O/L Mathematics to <strong>zero</strong> — initiated by FOCUS KUSA Primary in collaboration with experienced teachers from the Kinniya Education Zone.</p>" },
+                    { heading: "Objectives", content: "<ul><li>Transform rural schools into vibrant math learning centers.</li><li>Strengthen knowledge of Grades 10 & 11 students for national exams.</li><li>Introduce focused guidance and innovative teaching methods.</li></ul>" },
+                    { heading: "Impact", content: "<ul><li>Empowered students with greater confidence in mathematics.</li><li>Created structured opportunities for teacher-student collaboration.</li><li>Laying groundwork for long-term O/L mathematics improvement across the zone.</li></ul>" }
+                ]
+            },
+            "path-finder": {
+                badge: "Career Guidance",
+                title: "Path Finder – Career Guidance Program 2022",
+                meta: [
+                    { icon: "calendar--v1", text: "4th September 2022" },
+                    { icon: "marker", text: "Abdul Majeed Hall, Kinniya Central College" },
+                    { icon: "crowd.png", text: "68 Students (2021 A/L Batch)" }
+                ],
+                sections: [
+                    { heading: "Overview", content: "<p>A career guidance program providing direction for students stepping into higher education and career journeys.</p>" },
+                    { heading: "Highlights", content: "<ul><li><strong>Chief Guest:</strong> Mr. S.H. Mahroos (LLB), Deputy Registrar, Faculty of Applied Sciences, Trincomalee Campus.</li><li><strong>Resource Person:</strong> Brother Manasir (Undergraduate) — practical insights and personal experiences.</li><li>Volunteers & alumni played a key mentoring role.</li></ul>" },
+                    { heading: "Impact", content: "<p>Students gained clarity on career paths, higher education options, and professional aspirations through expert guidance and interactive discussion.</p>" }
+                ]
+            },
+            "greenrise": {
+                badge: "Environmental Initiative",
+                title: "GreenRise Initiative 2025 – Phase 01",
+                meta: [
+                    { icon: "calendar--v1", text: "5th–10th October 2025" },
+                    { icon: "marker", text: "Five Schools across Kinniya Region" }
+                ],
+                sections: [
+                    { heading: "Overview", content: "<p>A community-driven environmental project promoting sustainability and environmental awareness among school students. Inaugural session held on <strong>5th October 2025</strong> at T/Kin Kinniya Al-Aqsa National School (4:00 PM). Chief Guest: Mr. A.M. Mulawfar, Principal of T/Kin Kinniya Al-Aqsa National School.</p>" },
+                    { heading: "Plant Donation Schedule", content: "<ul><li>5th Oct – T/Kin Al-Aqsa National School</li><li>7th Oct – T/Kin T.B. Jaya Vidyalaya</li><li>7th Oct – T/Kin Al-Hira M.G.M.V.</li><li>9th Oct – T/Kin As-Safa Vidyalayam</li><li>10th Oct – T/Kin Alankerny Vinayagar Vidyalayam</li></ul><p><em>FOCUS KUSA donated five plants each to five schools.</em></p>" },
+                    { heading: "Objectives", content: "<ul><li>Promote environmental awareness and sustainability.</li><li>Encourage tree planting and conservation activities.</li><li>Create greener school environments in Kinniya.</li><li>Inspire a sense of responsibility towards nature.</li></ul>" }
+                ]
+            },
+            "seeds-of-impact": {
+                badge: "Community Education",
+                title: "Seeds of Impact – Session 01 (2025)",
+                meta: [
+                    { icon: "calendar--v1", text: "18th October 2025, 8:00 AM – 1:00 PM" },
+                    { icon: "marker", text: "T/Kin Dharul Uloom M.V." }
+                ],
+                sections: [
+                    { heading: "About", content: "<p>The first session of Seeds of Impact was conducted in collaboration with the <strong>Majlisul Islam, Faculty of Applied Sciences (FAS), South Eastern University of Sri Lanka</strong>. Students from T/Kin Dharul Uloom M.V. and T/Kin Kakamunai Govt. Muslim Mixed School participated.</p>" },
+                    { heading: "Focus Area", content: "<p>G.C.E. O/L Mathematics — guiding students through important mathematical concepts and problem-solving techniques in a supportive and engaging learning environment.</p>" },
+                    { heading: "Objectives", content: "<ul><li>Strengthen O/L students' knowledge in Mathematics.</li><li>Provide academic guidance and practical problem-solving techniques.</li><li>Motivate students to perform well in G.C.E. O/L examinations.</li><li>Create opportunities for university students to contribute to community education.</li><li>Promote values of learning, leadership, and service.</li></ul>" }
+                ]
+            }
+        };
+
+        // ---- Modal Logic ----
+        const overlay = document.getElementById('projectModal');
+        const modalBody = document.getElementById('modalBody');
+        const modalClose = document.getElementById('modalClose');
+
+        function openModal(projectId) {
+            const data = projects[projectId];
+            if (!data) return;
+
+            let metaHTML = data.meta.map(m =>
+                `<span><img src="https://img.icons8.com/ios-filled/50/ffffff/${m.icon}.png" alt="" class="icon-img" style="opacity:0.5;width:0.9em;height:0.9em;"/> ${m.text}</span>`
+            ).join('');
+
+            let sectionsHTML = data.sections.map(s =>
+                `<div class="project-modal__section"><h4>${s.heading}</h4>${s.content}</div><hr class="project-modal__divider">`
+            ).join('');
+            // Remove last divider
+            sectionsHTML = sectionsHTML.replace(/<hr class="project-modal__divider">$/, '');
+
+            modalBody.innerHTML = `
+                <div class="project-modal__badge">${data.badge}</div>
+                <h2 class="project-modal__title">${data.title}</h2>
+                <div class="project-modal__meta">${metaHTML}</div>
+                ${sectionsHTML}
+            `;
+            overlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            overlay.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        overlay.addEventListener('click', (e) => { if (e.target === overlay) closeModal(); });
+        modalClose.addEventListener('click', closeModal);
+        document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
+
+        document.querySelectorAll('.project-card[data-project]').forEach(card => {
+            card.addEventListener('click', () => openModal(card.dataset.project));
+        });
+
+        // ---- Project Filtering Logic ----
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const projectCards = document.querySelectorAll('.project-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                const filterValue = btn.getAttribute('data-filter');
+                projectCards.forEach(card => {
+                    if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
+                        card.style.display = 'block';
+                        setTimeout(() => { card.style.opacity = '1'; card.style.transform = 'translateY(0)'; }, 50);
+                    } else {
+                        card.style.opacity = '0';
+                        card.style.transform = 'translateY(20px)';
+                        setTimeout(() => { card.style.display = 'none'; }, 300);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="/assets/images/logo-black.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Executive Board | FOCUS KUSA</title>
+    <meta name="description" content="Meet the current and past Executive Board members of FOCUS KUSA.">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+    <div id="navbar-container"></div>
+
+    <main>
+        <!-- PAGE HERO -->
+        <section class="page-hero">
+            <div class="container">
+                <div class="breadcrumb reveal-scale">
+                    <a href="index.html">Home</a>
+                    <span class="breadcrumb__separator">/</span>
+                    <span>Executive Board</span>
+                </div>
+                <h1 class="page-hero__title reveal"><span class="gold">Our</span> Leadership</h1>
+                <p class="page-hero__subtitle reveal" style="transition-delay: 100ms;">
+                    Meet the dedicated university students guiding FOCUS KUSA and leading our mission to empower the
+                    community.
+                </p>
+            </div>
+        </section>
+
+        <!-- BOARD TABS & GRID -->
+        <section class="section" style="padding-top: var(--sp-12);">
+            <div class="container">
+
+                <!-- Tabs container -->
+                <div class="board-tabs reveal" id="boardTabs">
+                    <!-- Dynamically generated tabs will go here -->
+                </div>
+
+                <!-- Content container -->
+                <div id="boardContainer" class="reveal">
+                    <!-- Dynamically generated grids will go here -->
+                </div>
+
+            </div>
+        </section>
+
+        <!-- LEGACY SECTION -->
+        <section class="section section--dark" style="border-top: 1px solid rgba(232, 163, 23, 0.1);">
+            <div class="container text-center reveal">
+                <h2 class="section-title">A Legacy of <span class="gold">Service</span></h2>
+                <p class="section-subtitle" style="margin: 0 auto;">
+                    Since 2019, our association has been shaped by the tireless efforts of our executive boards. Each
+                    term brings new leaders who carry forward our vision, bringing fresh ideas while staying true to our
+                    core mission of uplifting Kinniya through education.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer-container"></div>
+
+    <script type="module">
+        import { renderNavbar, renderFooter } from './js/main.js';
+        import { boardData } from './js/boardData.js';
+
+        document.getElementById('navbar-container').innerHTML = renderNavbar('board.html');
+        document.getElementById('footer-container').innerHTML = renderFooter();
+
+        // Logic to render Board Grid from JSON
+        const boardTabs = document.getElementById('boardTabs');
+        const boardContainer = document.getElementById('boardContainer');
+
+        function initBoard() {
+            // Sort years descending
+            const years = Object.keys(boardData).sort((a, b) => b.localeCompare(a));
+
+            let htmlTabs = '';
+            let htmlContent = '';
+
+            years.forEach((year, index) => {
+                const isActive = index === 0 ? 'active' : '';
+                const members = boardData[year];
+
+                // Generate tab
+                htmlTabs += `<button class="board-tab ${isActive}" data-year="${year}">${year} Term</button>`;
+
+                // Generate grid
+                let membersHtml = members.map(m => `
+          <div class="member-card">
+            <div class="member-card__photo">
+              ${m.photo || m.image ?
+                        `<img src="${m.photo || m.image}" alt="${m.name}" onerror="this.outerHTML='<div class=\\'member-card__photo-placeholder\\'><img src=\\'https://img.icons8.com/ios-filled/50/ffffff/user.png\\' class=\\'icon-img\\' style=\\'width: 2em; height: 2em;\\' /></div>'">` :
+                        `<div class="member-card__photo-placeholder"><img src="https://img.icons8.com/ios-filled/50/ffffff/user.png" class="icon-img" style="width: 2em; height: 2em;" /></div>`
+                    }
+            </div>
+            <div class="member-card__position">${m.position || '-'}</div>
+            <h3 class="member-card__name">${m.name}</h3>
+            <div class="member-card__university">${m.university || 'University Student'}</div>
+            ${m.email ? `<div class="member-card__email" style="display: flex; align-items: center; justify-content: center; gap: 6px; font-size: var(--fs-xs); color: var(--clr-gray-400); margin-top: auto; padding-top: var(--sp-3);"><img src="https://img.icons8.com/ios-filled/50/ffffff/new-post.png" class="icon-img" alt="email" style="opacity: 0.7;"/> <a href="mailto:${m.email}">${m.email}</a></div>` : ''}
+          </div>
+        `).join('');
+
+                if (members.length === 0) {
+                    membersHtml = '<p style="text-align: center; color: var(--clr-gray-500); grid-column: 1/-1;">Details not yet available for this term.</p>';
+                }
+
+                htmlContent += `
+          <div class="board-content ${isActive}" id="board-${year}">
+            <h2 style="font-family: var(--font-heading); font-size: var(--fs-2xl); color: var(--clr-white); margin-bottom: var(--sp-8); text-align: center;">Executive Committee - ${year}</h2>
+            <div class="board-grid">
+              ${membersHtml}
+            </div>
+          </div>
+        `;
+            });
+
+            boardTabs.innerHTML = htmlTabs;
+            boardContainer.innerHTML = htmlContent;
+
+            // Event Listeners for Tabs
+            const tabs = document.querySelectorAll('.board-tab');
+            const contents = document.querySelectorAll('.board-content');
+
+            tabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    // Reset
+                    tabs.forEach(t => t.classList.remove('active'));
+                    contents.forEach(c => c.classList.remove('active'));
+
+                    // Activate clicked
+                    tab.classList.add('active');
+                    const year = tab.getAttribute('data-year');
+                    document.getElementById(`board-${year}`).classList.add('active');
+                });
+            });
+        }
+
+        // Initialize if data exists
+        if (boardData) {
+            initBoard();
+        }
+    </script>
+</body>
+
+</html>
