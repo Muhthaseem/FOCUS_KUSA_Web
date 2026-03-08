@@ -85,7 +85,7 @@ export const boardData = {
       "university": "University of Moratuwa",
       "course": "NDT",
       "email": "⁠shakkeel000@gmail.com",
-      "photo": null
+      "photo": "/FOCUS_KUSA_Web/assets/images/exco/Shakkeel.png"
     },
     {
       "no": "5",
@@ -501,7 +501,7 @@ export const boardData = {
       "university": null,
       "course": null,
       "email": null,
-      "photo": "/FOCUS_KUSA_Web/assets/images/exco/Ijas.png"
+      "photo": null
     },
     {
       "no": "7",
