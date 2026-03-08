@@ -10,20 +10,32 @@ export const boardData = {
       "address": "No 57/2, Al Aqza Road, Kinniya 02",
       "university": "University of Colombo",
       "course": "Medicine",
-      "email": null,
-      "photo": null
+      "email": "mroshen97@gmail.com",
+      "photo": "/FOCUS_KUSA_Web/assets/images/exco/Roshen.png"
+    },
+    {
+      "no": "3",
+      "position": "Secretary",
+      "name": "A.F. Aqeel Ahamed",
+      "nic": "980012271v",
+      "phonenumberwhatsapp": "775599381",
+      "address": "Kurinchakerny 02, Kinniya",
+      "university": "Univeristy of Jaffna",
+      "course": "Physical Science",
+      "email": "aqeelahamed9@gmail.com",
+      "photo": "/FOCUS_KUSA_Web/assets/images/exco/Aqeel.png"
     },
     {
       "no": "5",
       "position": "Event Coordinator",
       "name": "R.M. Al Fathih",
       "nic": "973234099v",
-      "phonenumberwhatsapp": "755438148",
+      "phonenumberwhatsapp": "755438148 / 768343459",
       "address": "KCC West Land, Kuttikarachi, Kinniya 05",
-      "university": null,
-      "course": null,
-      "email": null,
-      "photo": `/FOCUS_KUSA_Web/assets/images/exco/Fathih.png`
+      "university": "Univeristy of Jaffna",
+      "course": "Siddha Medicine & Surgery",
+      "email": "rafeekfathih1@gmail.com",
+      "photo": "/FOCUS_KUSA_Web/assets/images/exco/Fathih.png"
     }
   ],
   "2023": [
@@ -37,7 +49,7 @@ export const boardData = {
       "university": "South Eastern University of Sri Lanka",
       "course": "Engineering",
       "email": "aboofainaz@gmail.com",
-      "photo": `/FOCUS_KUSA_Web/assets/images/exco/Fainaz.png`
+      "photo": "/FOCUS_KUSA_Web/assets/images/exco/Fainaz.png"
     },
     {
       "no": "2",
@@ -49,7 +61,7 @@ export const boardData = {
       "university": "University of Sri Jayewardenepura",
       "course": "ICT",
       "email": "ihjasdev@gmail.com",
-      "photo": `/FOCUS_KUSA_Web/assets/images/exco/Ihjas.png`
+      "photo": "/FOCUS_KUSA_Web/assets/images/exco/Ihjas.png"
     },
     {
       "no": "3",
@@ -61,31 +73,31 @@ export const boardData = {
       "university": "University of Colombo",
       "course": "Nursing",
       "email": "fasleem2@gmail.com",
-      "photo": `/FOCUS_KUSA_Web/assets/images/exco/Fasleem.png`
+      "photo": "/FOCUS_KUSA_Web/assets/images/exco/Fasleem.png"
     },
     {
       "no": "4",
       "position": "Treasurer",
-      "name": "W.M. Shakkeel",
+      "name": "W.M. Shakeel",
       "nic": "983233350v",
       "phonenumberwhatsapp": "757405050",
       "address": "Peruntheru, Kinniya - 05",
       "university": "University of Moratuwa",
       "course": "NDT",
       "email": "⁠shakkeel000@gmail.com",
-      "photo": `/FOCUS_KUSA_Web/assets/images/exco/Shakkeel.png`
+      "photo": null
     },
     {
       "no": "5",
       "position": "Event Coordinator",
       "name": "M.I.M. Rais",
       "nic": null,
-      "phonenumberwhatsapp": null,
+      "phonenumberwhatsapp": "752245777",
       "address": null,
-      "university": null,
-      "course": null,
+      "university": "South Eastern University of Sri Lanka",
+      "course": "Physical Science",
       "email": null,
-      "photo": `/FOCUS_KUSA_Web/assets/images/exco/Rais.png`
+      "photo": "/FOCUS_KUSA_Web/assets/images/exco/Rais.png"
     },
     {
       "no": "6",
@@ -97,7 +109,7 @@ export const boardData = {
       "university": "Rajarata University of Sri Lanka",
       "course": "ICT",
       "email": "hazeebsameem321@gmail.com",
-      "photo": `/FOCUS_KUSA_Web/assets/images/exco/Hazeeb.png`
+      "photo": "/FOCUS_KUSA_Web/assets/images/exco/Hazeeb.png"
     }
   ],
   "2024": [
@@ -111,7 +123,7 @@ export const boardData = {
       "university": "University of Moratuwa",
       "course": "Engineering",
       "email": "sareefsarraj1999@gmail.com",
-      "photo": `/FOCUS_KUSA_Web/assets/images/exco/Sarraj.png`
+      "photo": "/FOCUS_KUSA_Web/assets/images/exco/Sarraj.png"
     },
     {
       "no": "2",
@@ -123,7 +135,7 @@ export const boardData = {
       "university": "University of Vavuniya",
       "course": "Project Management",
       "email": "mohamedmanasir002@gmail.com",
-      "photo": `/FOCUS_KUSA_Web/assets/images/exco/Manasir.png`
+      "photo": "/FOCUS_KUSA_Web/assets/images/exco/Manasir.png"
     },
     {
       "no": "3",
@@ -135,7 +147,7 @@ export const boardData = {
       "university": "South Eastern University of Sri Lanka",
       "course": "Arts",
       "email": "mohamedfarhan8518@gmail.com",
-      "photo": `/FOCUS_KUSA_Web/assets/images/exco/Farhan.png`
+      "photo": "/FOCUS_KUSA_Web/assets/images/exco/Farhan.png"
     },
     {
       "no": "4",
@@ -147,7 +159,7 @@ export const boardData = {
       "university": "University of Sri Jayewardenepura",
       "course": "Engineering",
       "email": "muzoufilmuhthaseem@gmail.com",
-      "photo": `/FOCUS_KUSA_Web/assets/images/exco/Muhthaseem.png`
+      "photo": "/FOCUS_KUSA_Web/assets/images/exco/Muhthaseem.png"
     },
     {
       "no": "5",
@@ -159,7 +171,7 @@ export const boardData = {
       "university": "University of Moratuwa",
       "course": "NDT in Electrical Engineering",
       "email": "aasifaha119@gmail.com",
-      "photo": `/FOCUS_KUSA_Web/assets/images/exco/Aashif.png`
+      "photo": "/FOCUS_KUSA_Web/assets/images/exco/Aashif.png"
     }
   ],
   "2025": [
@@ -173,7 +185,7 @@ export const boardData = {
       "university": "University of Sri Jayewardenepura",
       "course": "Engineering",
       "email": "muzoufilmuhthaseem@gmail.com",
-      "photo": `/FOCUS_KUSA_Web/assets/images/exco/Muhthaseem.png`
+      "photo": "/FOCUS_KUSA_Web/assets/images/exco/Muhthaseem.png"
     },
     {
       "no": "2",
@@ -185,7 +197,7 @@ export const boardData = {
       "university": "University of Moratuwa",
       "course": "NDT in Electrical Engineering",
       "email": "aasifaha119@gmail.com",
-      "photo": `/FOCUS_KUSA_Web/assets/images/exco/Aashif.png`
+      "photo": "/FOCUS_KUSA_Web/assets/images/exco/Aashif.png"
     },
     {
       "no": "3",
@@ -197,7 +209,7 @@ export const boardData = {
       "university": "University of Ruhuna",
       "course": "Nursing",
       "email": "nmfasith01@gmail.com",
-      "photo": `/FOCUS_KUSA_Web/assets/images/exco/Fasith.png`
+      "photo": "/FOCUS_KUSA_Web/assets/images/exco/Fasith.png"
     },
     {
       "no": "4",
@@ -209,7 +221,7 @@ export const boardData = {
       "university": "University of Colombo",
       "course": "Nursing",
       "email": "shakilsul123@gmail.com",
-      "photo": `/FOCUS_KUSA_Web/assets/images/exco/Shakil.png`
+      "photo": "/FOCUS_KUSA_Web/assets/images/exco/Shakil.png"
     },
     {
       "no": "5",
@@ -221,7 +233,7 @@ export const boardData = {
       "university": "Rajarata University of Sri Lanka",
       "course": "Management",
       "email": "mohamedihsan107@gmail.com",
-      "photo": `/FOCUS_KUSA_Web/assets/images/exco/Ihsan.png`
+      "photo": "/FOCUS_KUSA_Web/assets/images/exco/Ihsan.png"
     },
     {
       "no": "6",
@@ -233,7 +245,7 @@ export const boardData = {
       "university": "University of Jaffna",
       "course": "Nursing",
       "email": "moraiyan2002@gmail.com",
-      "photo": `/FOCUS_KUSA_Web/assets/images/exco/Raiyan.png`
+      "photo": "/FOCUS_KUSA_Web/assets/images/exco/Raiyan.png"
     },
     {
       "no": "7",
@@ -245,7 +257,7 @@ export const boardData = {
       "university": "South Eastern University of Sri Lanka",
       "course": "Biological Science",
       "email": "amnafees2001@gmail.com",
-      "photo": `/FOCUS_KUSA_Web/assets/images/exco/Nafees.png`
+      "photo": "/FOCUS_KUSA_Web/assets/images/exco/Nafees.png"
     },
     {
       "no": "8",
@@ -257,7 +269,7 @@ export const boardData = {
       "university": "Institute of Technology University of Moratuwa",
       "course": "NDT in Electrical Engineering",
       "email": "mrmshajith@gmail.com",
-      "photo": `/FOCUS_KUSA_Web/assets/images/exco/Shajith.png`
+      "photo": "/FOCUS_KUSA_Web/assets/images/exco/Shajith.png"
     },
     {
       "no": "9",
@@ -269,7 +281,7 @@ export const boardData = {
       "university": "Eastern University, Sri Lanka",
       "course": "Sociology and anthropology",
       "email": "rasmideen01@gmail.com",
-      "photo": `/FOCUS_KUSA_Web/assets/images/exco/Rasmideen.png`
+      "photo": "/FOCUS_KUSA_Web/assets/images/exco/Rasmideen.png"
     },
     {
       "no": "10",
@@ -281,7 +293,7 @@ export const boardData = {
       "university": "University of Ruhuna",
       "course": "Financial Mathematics and Industrial Statistics",
       "email": "shakeebahamed456@gmail.com",
-      "photo": `/FOCUS_KUSA_Web/assets/images/exco/Shakeeb.png`
+      "photo": "/FOCUS_KUSA_Web/assets/images/exco/Shakeeb.png"
     }
   ],
   "2026": [
@@ -295,7 +307,7 @@ export const boardData = {
       "university": "University of Jaffna",
       "course": "Nursing",
       "email": "riskhanmd6572@gmail.com",
-      "photo": `/FOCUS_KUSA_Web/assets/images/exco/Riskhan.png`
+      "photo": "/FOCUS_KUSA_Web/assets/images/exco/Riskhan.png"
     },
     {
       "no": "2",
@@ -307,7 +319,7 @@ export const boardData = {
       "university": "Wayamba University of Sri Lanka",
       "course": "Food Production and Technology Management",
       "email": "mrmohammedrifthy1@gmail.com",
-      "photo": `/FOCUS_KUSA_Web/assets/images/exco/Rifthi.png`
+      "photo": "/FOCUS_KUSA_Web/assets/images/exco/Rifthi.png"
     },
     {
       "no": "3",
@@ -319,7 +331,7 @@ export const boardData = {
       "university": "Wayamba University of Sri Lanka",
       "course": "Medicine",
       "email": "mohamedifkhan24@gmail.com",
-      "photo": `/FOCUS_KUSA_Web/assets/images/exco/Ifkhan.png`
+      "photo": "/FOCUS_KUSA_Web/assets/images/exco/Ifkhan.png"
     },
     {
       "no": "4",
@@ -331,7 +343,7 @@ export const boardData = {
       "university": "University of Peradeniya",
       "course": "Social work",
       "email": "ijas7066@gmail.com",
-      "photo": `/FOCUS_KUSA_Web/assets/images/exco/Ijas.png`
+      "photo": "/FOCUS_KUSA_Web/assets/images/exco/Ijas.png"
     },
     {
       "no": "5",
@@ -343,7 +355,7 @@ export const boardData = {
       "university": "Trincomalee Campus, EUSL",
       "course": "Physical science",
       "email": "sahmeersahmeer125@gmail.com",
-      "photo": `/FOCUS_KUSA_Web/assets/images/exco/Sahmeer.png`
+      "photo": "/FOCUS_KUSA_Web/assets/images/exco/Sahmeer.png"
     },
     {
       "no": "6",
@@ -355,7 +367,7 @@ export const boardData = {
       "university": "Trincomalee Campus, EUSL",
       "course": "Physical science",
       "email": "umohamedatheeb@gmail.com",
-      "photo": `/FOCUS_KUSA_Web/assets/images/exco/Atheeb.png`
+      "photo": "/FOCUS_KUSA_Web/assets/images/exco/Atheeb.png"
     },
     {
       "no": "7",
@@ -367,7 +379,7 @@ export const boardData = {
       "university": "South Eastern University of Sri Lanka",
       "course": "Physical Science",
       "email": "ahamedaaa2373@gmail.com",
-      "photo": `/FOCUS_KUSA_Web/assets/images/exco/Athnan.png`
+      "photo": "/FOCUS_KUSA_Web/assets/images/exco/Athnan.png"
     },
     {
       "no": "8",
@@ -379,7 +391,7 @@ export const boardData = {
       "university": "Sabaragamuwa University of Sri Lanka",
       "course": "Data science",
       "email": "sharfiazeez2004116@gmail.com",
-      "photo": `/FOCUS_KUSA_Web/assets/images/exco/Sharfi.png`
+      "photo": "/FOCUS_KUSA_Web/assets/images/exco/Sharfi.png"
     },
     {
       "no": "9",
@@ -391,7 +403,7 @@ export const boardData = {
       "university": "University of Vavuniya",
       "course": "ICT",
       "email": "nihasmohammedriwaqi@gmail.com",
-      "photo": `/FOCUS_KUSA_Web/assets/images/exco/Riwaqi.png`
+      "photo": "/FOCUS_KUSA_Web/assets/images/exco/Riwaqi.png"
     },
     {
       "no": "10",
@@ -403,7 +415,7 @@ export const boardData = {
       "university": "University of Ruhuna",
       "course": "Engineering",
       "email": "mmsajath10867@gmail.com",
-      "photo": `/FOCUS_KUSA_Web/assets/images/exco/Sajath.png`
+      "photo": "/FOCUS_KUSA_Web/assets/images/exco/Sajath.png"
     },
     {
       "no": "11",
@@ -415,17 +427,29 @@ export const boardData = {
       "university": "University of Peradeniya",
       "course": "Arts",
       "email": "mohamedabrar7515@gmail.com",
-      "photo": `/FOCUS_KUSA_Web/assets/images/exco/Abrar.png`
+      "photo": "/FOCUS_KUSA_Web/assets/images/exco/Abrar.png"
     }
   ],
   "2019-21": [
     {
       "no": "1",
-      "position": "President, Acting Treasurer",
+      "position": "President & Treasurer",
       "name": "M. Karlavi Maharoof",
       "nic": "970064176v",
       "phonenumberwhatsapp": "778334459‬",
       "address": "Kurinchakerny-02, Kinniya",
+      "university": "Sabaragamuwa University of Sri Lanka",
+      "course": "Computing & Information Systems",
+      "email": "fathhimaharoof@gmail.com",
+      "photo": "/FOCUS_KUSA_Web/assets/images/exco/Karlavi.png"
+    },
+    {
+      "no": "2",
+      "position": "Vice President",
+      "name": "Mohamed",
+      "nic": null,
+      "phonenumberwhatsapp": "758976921",
+      "address": null,
       "university": null,
       "course": null,
       "email": null,
@@ -441,8 +465,67 @@ export const boardData = {
       "university": "University of Peradeniya",
       "course": "Medicine",
       "email": "ihthi96sham@gmail.com",
-      "photo": `/FOCUS_KUSA_Web/assets/images/exco/Ihthisham.png`
+      "photo": "/FOCUS_KUSA_Web/assets/images/exco/Ihthisham.png"
+    },
+    {
+      "no": "4",
+      "position": "Maths & Robotics Coordinator",
+      "name": "Sabry",
+      "nic": null,
+      "phonenumberwhatsapp": "762646705",
+      "address": null,
+      "university": null,
+      "course": null,
+      "email": null,
+      "photo": null
+    },
+    {
+      "no": "5",
+      "position": "Arts & Culture Coordinator",
+      "name": "Nasik",
+      "nic": null,
+      "phonenumberwhatsapp": "756820591",
+      "address": null,
+      "university": null,
+      "course": null,
+      "email": null,
+      "photo": null
+    },
+    {
+      "no": "6",
+      "position": "Media Coordinator",
+      "name": "Ijas",
+      "nic": null,
+      "phonenumberwhatsapp": "779309950",
+      "address": null,
+      "university": null,
+      "course": null,
+      "email": null,
+      "photo": "/FOCUS_KUSA_Web/assets/images/exco/Ijas.png"
+    },
+    {
+      "no": "7",
+      "position": "Event Coordinator",
+      "name": "Ahzan Khan",
+      "nic": null,
+      "phonenumberwhatsapp": "756229196",
+      "address": null,
+      "university": null,
+      "course": null,
+      "email": null,
+      "photo": null
+    },
+    {
+      "no": "8",
+      "position": "Sports & Development Coordinator",
+      "name": "Najath",
+      "nic": null,
+      "phonenumberwhatsapp": "774303998",
+      "address": null,
+      "university": null,
+      "course": null,
+      "email": null,
+      "photo": null
     }
   ]
 };
-

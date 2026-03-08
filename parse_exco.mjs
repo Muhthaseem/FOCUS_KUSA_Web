@@ -57,7 +57,7 @@ if (fs.existsSync(photoDir)) {
         const ext = path.extname(file).toLowerCase();
         if (['.png', '.jpg', '.jpeg', '.webp'].includes(ext)) {
             const baseName = path.basename(file, ext).toLowerCase();
-            photoMap[baseName] = `/assets/images/exco/${file}`;
+            photoMap[baseName] = `/FOCUS_KUSA_Web/assets/images/exco/${file}`;
         }
     });
 }
