@@ -1,4 +1,0 @@
-import{r as l,a as r}from"./main-C3d6uC_b.js";document.getElementById("navbar-container").innerHTML=l("contact.html");document.getElementById("footer-container").innerHTML=r();const t=document.getElementById("contactForm"),n=document.getElementById("formSuccess");t.addEventListener("submit",o=>{o.preventDefault();const e=t.querySelector('button[type="submit"]'),s=e.textContent;e.textContent="Preparing Email...",e.style.opacity="0.7",e.disabled=!0;const a=document.getElementById("name").value,c=document.getElementById("subject").value,m=document.getElementById("message").value,d=`mailto:focuskusa2019@gmail.com?subject=FOCUS KUSA Website: ${encodeURIComponent(c)}&body=${encodeURIComponent("Name: "+a+`
-
-Message:
-`+m)}`;window.location.href=d,setTimeout(()=>{t.style.display="none",n.classList.add("show"),t.reset(),e.textContent=s,e.style.opacity="1",e.disabled=!1},1e3)});window.resetForm=function(){n.classList.remove("show"),t.style.display="block"};
