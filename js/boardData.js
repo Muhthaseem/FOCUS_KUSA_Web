@@ -1,5 +1,103 @@
 // Auto-generated from CSV sources
 export const boardData = {
+  "2019-21": [
+    {
+      "no": "1",
+      "position": "President & Treasurer",
+      "name": "M. Karlavi Maharoof",
+      "nic": "970064176v",
+      "phonenumberwhatsapp": "778334459‬",
+      "address": "Kurinchakerny-02, Kinniya",
+      "university": "Sabaragamuwa University of Sri Lanka",
+      "course": "Computing & Information Systems",
+      "email": "fathhimaharoof@gmail.com",
+      "photo": "/FOCUS_KUSA_Web/assets/images/exco/Karlavi.png"
+    },
+    {
+      "no": "2",
+      "position": "Secretary",
+      "name": "A.M. Ihthisham",
+      "nic": "962300227v",
+      "phonenumberwhatsapp": "775157472",
+      "address": "70A, Peruntheru, Kinniya - 05",
+      "university": "University of Peradeniya",
+      "course": "Medicine",
+      "email": "ihthi96sham@gmail.com",
+      "photo": "/FOCUS_KUSA_Web/assets/images/exco/Ihthisham.png"
+    },
+    {
+      "no": "3",
+      "position": "Vice President",
+      "name": "I. Ahamed",
+      "nic": "970191127v",
+      "phonenumberwhatsapp": "758976921",
+      "address": "Malinthurai, Kinniya-04",
+      "university": "Eastern University of Sri Lanka",
+      "course": "Arts",
+      "email": "ibnahamed06@gmail.com",
+      "photo": "/FOCUS_KUSA_Web/assets/images/exco/Ahamed.png"
+    },
+    {
+      "no": "4",
+      "position": "Maths & Robotics Coordinator",
+      "name": "Sabry",
+      "nic": null,
+      "phonenumberwhatsapp": "762646705",
+      "address": null,
+      "university": null,
+      "course": null,
+      "email": null,
+      "photo": null
+    },
+    {
+      "no": "5",
+      "position": "Arts & Culture Coordinator",
+      "name": "Nasik",
+      "nic": null,
+      "phonenumberwhatsapp": "756820591",
+      "address": null,
+      "university": null,
+      "course": null,
+      "email": null,
+      "photo": null
+    },
+    {
+      "no": "6",
+      "position": "Media Coordinator",
+      "name": "Ijas",
+      "nic": null,
+      "phonenumberwhatsapp": "779309950",
+      "address": null,
+      "university": null,
+      "course": null,
+      "email": null,
+      "photo": null
+    },
+    {
+      "no": "7",
+      "position": "Event Coordinator",
+      "name": "Ahzan Khan",
+      "nic": null,
+      "phonenumberwhatsapp": "756229196",
+      "address": null,
+      "university": null,
+      "course": null,
+      "email": null,
+      "photo": null
+    },
+    {
+      "no": "8",
+      "position": "Sports & Development Coordinator",
+      "name": "Najath",
+      "nic": null,
+      "phonenumberwhatsapp": "774303998",
+      "address": null,
+      "university": null,
+      "course": null,
+      "email": null,
+      "photo": null
+    }
+  ],
   "2022": [
     {
       "no": "1",
@@ -14,7 +112,7 @@ export const boardData = {
       "photo": "/FOCUS_KUSA_Web/assets/images/exco/Roshen.png"
     },
     {
-      "no": "3",
+      "no": "2",
       "position": "Secretary",
       "name": "A.F. Aqeel Ahamed",
       "nic": "980012271v",
@@ -26,7 +124,19 @@ export const boardData = {
       "photo": "/FOCUS_KUSA_Web/assets/images/exco/Aqeel.png"
     },
     {
-      "no": "5",
+      "no": "3",
+      "position": "Treasurer",
+      "name": "U.M. Safan",
+      "nic": "199729500963",
+      "phonenumberwhatsapp": "757164795",
+      "address": "111/4, Abubakkar MP Road, Kattayaru, Kinniya -2",
+      "university": "Trincomalee Campus, Eastern University of Srilanka",
+      "course": "Computer Science",
+      "email": "umsafan21@gmail.com",
+      "photo": "/FOCUS_KUSA_Web/assets/images/exco/Safan.png"
+    },
+    {
+      "no": "4",
       "position": "Event Coordinator",
       "name": "R.M. Al Fathih",
       "nic": "973234099v",
@@ -53,18 +163,6 @@ export const boardData = {
     },
     {
       "no": "2",
-      "position": "Vice President",
-      "name": "A.M. Ihjas",
-      "nic": "980871363v",
-      "phonenumberwhatsapp": "758913173",
-      "address": "No 80, Kattaiyaru Street,Kinniya 02",
-      "university": "University of Sri Jayewardenepura",
-      "course": "ICT",
-      "email": "ihjasdev@gmail.com",
-      "photo": "/FOCUS_KUSA_Web/assets/images/exco/Ihjas.png"
-    },
-    {
-      "no": "3",
       "position": "Secretary",
       "name": "M.M. Fasleem",
       "nic": "971281960v",
@@ -76,7 +174,7 @@ export const boardData = {
       "photo": "/FOCUS_KUSA_Web/assets/images/exco/Fasleem.png"
     },
     {
-      "no": "4",
+      "no": "3",
       "position": "Treasurer",
       "name": "W.M. Shakeel",
       "nic": "983233350v",
@@ -88,7 +186,7 @@ export const boardData = {
       "photo": "/FOCUS_KUSA_Web/assets/images/exco/Shakkeel.png"
     },
     {
-      "no": "5",
+      "no": "4",
       "position": "Event Coordinator",
       "name": "M.I.M. Rais",
       "nic": null,
@@ -98,6 +196,18 @@ export const boardData = {
       "course": "Physical Science",
       "email": null,
       "photo": "/FOCUS_KUSA_Web/assets/images/exco/Rais.png"
+    },
+    {
+      "no": "5",
+      "position": "Vice President",
+      "name": "A.M. Ihjas",
+      "nic": "980871363v",
+      "phonenumberwhatsapp": "758913173",
+      "address": "No 80, Kattaiyaru Street,Kinniya 02",
+      "university": "University of Sri Jayewardenepura",
+      "course": "ICT",
+      "email": "ihjasdev@gmail.com",
+      "photo": "/FOCUS_KUSA_Web/assets/images/exco/Ihjas.png"
     },
     {
       "no": "6",
@@ -430,102 +540,4 @@ export const boardData = {
       "photo": "/FOCUS_KUSA_Web/assets/images/exco/Abrar.png"
     }
   ],
-  "2019-21": [
-    {
-      "no": "1",
-      "position": "President & Treasurer",
-      "name": "M. Karlavi Maharoof",
-      "nic": "970064176v",
-      "phonenumberwhatsapp": "778334459‬",
-      "address": "Kurinchakerny-02, Kinniya",
-      "university": "Sabaragamuwa University of Sri Lanka",
-      "course": "Computing & Information Systems",
-      "email": "fathhimaharoof@gmail.com",
-      "photo": "/FOCUS_KUSA_Web/assets/images/exco/Karlavi.png"
-    },
-    {
-      "no": "2",
-      "position": "Vice President",
-      "name": "Mohamed",
-      "nic": null,
-      "phonenumberwhatsapp": "758976921",
-      "address": null,
-      "university": null,
-      "course": null,
-      "email": null,
-      "photo": null
-    },
-    {
-      "no": "3",
-      "position": "Secretary",
-      "name": "A.M. Ihthisham",
-      "nic": "962300227v",
-      "phonenumberwhatsapp": "775157472",
-      "address": "70A, Peruntheru, Kinniya - 05",
-      "university": "University of Peradeniya",
-      "course": "Medicine",
-      "email": "ihthi96sham@gmail.com",
-      "photo": "/FOCUS_KUSA_Web/assets/images/exco/Ihthisham.png"
-    },
-    {
-      "no": "4",
-      "position": "Maths & Robotics Coordinator",
-      "name": "Sabry",
-      "nic": null,
-      "phonenumberwhatsapp": "762646705",
-      "address": null,
-      "university": null,
-      "course": null,
-      "email": null,
-      "photo": null
-    },
-    {
-      "no": "5",
-      "position": "Arts & Culture Coordinator",
-      "name": "Nasik",
-      "nic": null,
-      "phonenumberwhatsapp": "756820591",
-      "address": null,
-      "university": null,
-      "course": null,
-      "email": null,
-      "photo": null
-    },
-    {
-      "no": "6",
-      "position": "Media Coordinator",
-      "name": "Ijas",
-      "nic": null,
-      "phonenumberwhatsapp": "779309950",
-      "address": null,
-      "university": null,
-      "course": null,
-      "email": null,
-      "photo": null
-    },
-    {
-      "no": "7",
-      "position": "Event Coordinator",
-      "name": "Ahzan Khan",
-      "nic": null,
-      "phonenumberwhatsapp": "756229196",
-      "address": null,
-      "university": null,
-      "course": null,
-      "email": null,
-      "photo": null
-    },
-    {
-      "no": "8",
-      "position": "Sports & Development Coordinator",
-      "name": "Najath",
-      "nic": null,
-      "phonenumberwhatsapp": "774303998",
-      "address": null,
-      "university": null,
-      "course": null,
-      "email": null,
-      "photo": null
-    }
-  ]
 };
