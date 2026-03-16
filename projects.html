@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -1386,6 +1386,8 @@
                     bgImg.src = src;
                     bgImg.className = 'slide-bg-blur';
                     bgImg.alt = '';
+                    bgImg.loading = idx === 0 ? 'eager' : 'lazy';
+                    bgImg.decoding = 'async';
                     slide.appendChild(bgImg);
 
                     // Main Image
@@ -1394,6 +1396,7 @@
                     img.className = 'slide-main-img';
                     img.alt = `Project photo ${idx + 1}`;
                     img.loading = idx === 0 ? 'eager' : 'lazy';
+                    img.decoding = 'async';
                     img.onerror = function () { this.parentElement.style.display = 'none'; totalSlides--; };
                     slide.appendChild(img);
 

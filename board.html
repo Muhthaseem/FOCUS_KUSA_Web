@@ -93,7 +93,7 @@
           <div class="member-card">
             <div class="member-card__photo">
               ${m.photo || m.image ?
-                        `<img src="${m.photo || m.image}" alt="${m.name}" onerror="this.outerHTML='<div class=\\'member-card__photo-placeholder\\'><img src=\\'https://img.icons8.com/ios-filled/50/ffffff/user.png\\' class=\\'icon-img\\' style=\\'width: 2em; height: 2em;\\' /></div>'">` :
+                        `<img src="${m.photo || m.image}" alt="${m.name}" loading="lazy" decoding="async" onerror="this.outerHTML='<div class=\\'member-card__photo-placeholder\\'><img src=\\'https://img.icons8.com/ios-filled/50/ffffff/user.png\\' class=\\'icon-img\\' style=\\'width: 2em; height: 2em;\\' /></div>'">` :
                         `<div class="member-card__photo-placeholder"><img src="https://img.icons8.com/ios-filled/50/ffffff/user.png" class="icon-img" style="width: 2em; height: 2em;" /></div>`
                     }
             </div>
