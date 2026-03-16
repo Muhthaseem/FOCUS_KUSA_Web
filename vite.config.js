@@ -2,7 +2,7 @@ import { defineConfig } from 'vite';
 import { resolve } from 'path';
 
 export default defineConfig({
-  base: '/FOCUS_KUSA_Web/',   // ← GitHub repo name (must match exactly)
+  base: '/',   // ← GitHub repo name (must match exactly)
   build: {
     rollupOptions: {
       input: {
