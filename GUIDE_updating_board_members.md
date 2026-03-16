@@ -55,7 +55,7 @@ Add a new key at the top (newest first):
     "university": "University of XYZ",
     "course": "Course Name",
     "email": "email@example.com",
-    "photo": "/FOCUS_KUSA_Web/assets/images/exco/Firstname.png"
+    "photo": "/assets/images/exco/Firstname.png"
   },
   ...
 ],
@@ -86,7 +86,7 @@ Simply delete the entire `{ ... }` object for that member. Make sure there's no 
 | `university` | University name | `"University of Colombo"` |
 | `course` | Degree/Programme | `"Medicine"` |
 | `email` | Contact email | `"email@gmail.com"` |
-| `photo` | Image path (see Step 1) | `"/FOCUS_KUSA_Web/assets/images/exco/Name.png"` |
+| `photo` | Image path (see Step 1) | `"/assets/images/exco/Name.png"` |
 
 > If any field is unknown, set it to `null` — e.g. `"nic": null`
 
