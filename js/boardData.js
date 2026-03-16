@@ -6,7 +6,7 @@ export const boardData = {
       "position": "President & Treasurer",
       "name": "M. Karlavi Maharoof",
       "nic": "970064176v",
-      "phonenumberwhatsapp": "778334459‬",
+      "phonenumberwhatsapp": "778334459",
       "address": "Kurinchakerny-02, Kinniya",
       "university": "Sabaragamuwa University of Sri Lanka",
       "course": "Computing & Information Systems",
@@ -19,7 +19,7 @@ export const boardData = {
       "name": "A.M. Ihthisham",
       "nic": "962300227v",
       "phonenumberwhatsapp": "775157472",
-      "address": "70A, Peruntheru, Kinniya - 05",
+      "address": "70A, Peruntheru, Kinniya - 05",
       "university": "University of Peradeniya",
       "course": "Medicine",
       "email": "ihthi96sham@gmail.com",
@@ -39,63 +39,15 @@ export const boardData = {
     },
     {
       "no": "4",
-      "position": "Maths & Robotics Coordinator",
-      "name": "Sabry",
-      "nic": null,
-      "phonenumberwhatsapp": "762646705",
-      "address": null,
-      "university": null,
-      "course": null,
-      "email": null,
-      "photo": null
-    },
-    {
-      "no": "5",
-      "position": "Arts & Culture Coordinator",
-      "name": "Nasik",
-      "nic": null,
-      "phonenumberwhatsapp": "756820591",
-      "address": null,
-      "university": null,
-      "course": null,
-      "email": null,
-      "photo": null
-    },
-    {
-      "no": "6",
-      "position": "Media Coordinator",
-      "name": "Ijas",
-      "nic": null,
-      "phonenumberwhatsapp": "779309950",
-      "address": null,
-      "university": null,
-      "course": null,
-      "email": null,
-      "photo": null
-    },
-    {
-      "no": "7",
       "position": "Event Coordinator",
-      "name": "Ahzan Khan",
-      "nic": null,
+      "name": "S.M. Ahsaan",
+      "nic": "953281279v",
       "phonenumberwhatsapp": "756229196",
-      "address": null,
-      "university": null,
-      "course": null,
-      "email": null,
-      "photo": null
-    },
-    {
-      "no": "8",
-      "position": "Sports & Development Coordinator",
-      "name": "Najath",
-      "nic": null,
-      "phonenumberwhatsapp": "774303998",
-      "address": null,
-      "university": null,
-      "course": null,
-      "email": null,
-      "photo": null
+      "address": "Kurinchakerny, Kinniya",
+      "university": "University of Sri Jayewardenepura",
+      "course": "Medicine",
+      "email": "xyahzn@gmail.com",
+      "photo": "/FOCUS_KUSA_Web/assets/images/exco/Ahsaan.png"
     }
   ],
   "2022": [
@@ -187,18 +139,6 @@ export const boardData = {
     },
     {
       "no": "4",
-      "position": "Event Coordinator",
-      "name": "M.I.M. Rais",
-      "nic": null,
-      "phonenumberwhatsapp": "752245777",
-      "address": null,
-      "university": "South Eastern University of Sri Lanka",
-      "course": "Physical Science",
-      "email": null,
-      "photo": "/FOCUS_KUSA_Web/assets/images/exco/Rais.png"
-    },
-    {
-      "no": "5",
       "position": "Vice President",
       "name": "A.M. Ihjas",
       "nic": "980871363v",
@@ -208,6 +148,18 @@ export const boardData = {
       "course": "ICT",
       "email": "ihjasdev@gmail.com",
       "photo": "/FOCUS_KUSA_Web/assets/images/exco/Ihjas.png"
+    },
+    {
+      "no": "5",
+      "position": "Event Coordinator",
+      "name": "M.I.M. Rais",
+      "nic": null,
+      "phonenumberwhatsapp": "752245777",
+      "address": null,
+      "university": "South Eastern University of Sri Lanka",
+      "course": "Physical Science",
+      "email": null,
+      "photo": "/FOCUS_KUSA_Web/assets/images/exco/Rais.png"
     },
     {
       "no": "6",
